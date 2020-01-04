@@ -13,24 +13,7 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-/** 将wx函数转化成 返回为promise 的函数 */
-const promisic = function (func) {
-  return function (params = {}) {
-    return new Promise((resolve, reject) => {
-      const args = Object.assign(params, {
-        success: (res) => {
-          resolve(res);
-        },
-        fail: (error) => {
-          reject(error);
-        }
-      });
-      func(args);
-    });
-  };
-};
 
 module.exports = {
-  formatTime: formatTime,
-  promisic
+  formatTime: formatTime
 }

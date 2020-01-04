@@ -12,7 +12,7 @@ const config = {
 }
 class Http {
   //解构
-  request({ url, data = {}, method = 'POST' }) {
+  request({url,data = {},method = 'POST'}) {
     return new Promise((resolve, reject) => {
       this._request(url, resolve, reject, data, method)
     })

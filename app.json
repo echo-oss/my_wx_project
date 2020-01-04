@@ -1,47 +1,43 @@
 {
   "pages": [
-    "pages/navigator/index/index",
-    "pages/navigator/mine/index"
+    "pages/navigator/home/home",
+    "pages/navigator/center/index",
+    "pages/navigator/active-home/active-home",
+    "pages/subpackages/activity/hotKind/location/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "企业宣传",
+    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "tabBar": {
-    "color": "#aaa",
-    "selectedColor": "#3963BC",
-    "backgroundColor": "black",
-    "borderStyle": "black",
-    "list": [
-      {
-        "pagePath": "pages/navigator/index/index",
-        "text": "首页",
-        "iconPath": "/imgs/tabbar/base.png",
-        "selectedIconPath": "/imgs/tabbar/base-select.png"
-      },
-      {
-        "pagePath": "pages/navigator/mine/index",
-        "text": "我的",
-        "iconPath": "/imgs/tabbar/team.png",
-        "selectedIconPath": "/imgs/tabbar/team-select.png"
-      }
-    ]
-  },
-    "usingComponents": {
-      "s-hot-list": "/components/hot-list/index",
-      "s-spu-preview": "components/spu-preview/index"
-    },
   "style": "v2",
+  "sitemapLocation": "sitemap.json",
   "subPackages": [
     {
-      "root": "pages/subpackages/mall",
+      "root": "pages/subpackages/product",
       "pages": [
-        "product/productList/index",
-        "product/productDetail/index"
+        "productList/index"
       ]
     }
   ],
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "blue",
+    "color": "blue",
+    "list": [
+      {
+        "pagePath": "pages/navigator/home/home",
+        "selectedIconPath": "/images/tab/main_true.png",
+        "iconPath": "/images/tab/main.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/navigator/center/index",
+        "selectedIconPath": "/images/tab/my_true.png",
+        "iconPath": "/images/tab/my.png",
+        "text": "我的"
+      }
+    ]
+  }
 }
