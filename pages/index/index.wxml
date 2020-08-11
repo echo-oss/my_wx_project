@@ -1,0 +1,6 @@
+<!--pages/index/index.wxml-->
+<swiper indicator-dots indicator-active-color="blue" autoplay interval="{{1000}}" circular>
+    <swiper-item bind:tap="onSwiper" data-index="{{}}"  >
+        <image src="" class="img"></image>
+    </swiper-item>
+</swiper>
