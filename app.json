@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/navigator/index/index",
+    "pages/navigator/center/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#3963BC",
+    "backgroundColor": "black",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/navigator/index/index",
+        "text": "车界",
+        "iconPath": "/images/tabBar/base.png",
+        "selectedIconPath": "/images/tabBar/base-select.png"
+      },
+      {
+        "pagePath": "pages/navigator/center/index",
+        "text": "我的",
+        "iconPath": "/images/tabBar/team.png",
+        "selectedIconPath": "/images/tabBar/team-select.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pages/subpackages/"  ,
+      "pages": [
+        "detail/index/index"
+      ]
+    }
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,17 @@
+<!--pages/navigator/text/index.wxml-->
+<view class="container">
+    <swiper class="swiper" indicator-dots indicator-color indicator-active-color="#F0F8FF" autoplay interval="5000"
+            circular>
+        <block wx:for="{{banner}}" wx:key="index">
+            <swiper-item bind:tap="onBanner" data-id="{{item.ID}}">
+                <image class="swiper" src="{{item.src}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view></view>
+    <view></view>
+     <view>
+     <view></view>
+      <s-hot-scroll banner="{{bannerG}}"></s-hot-scroll>
+    </view>
+</view>

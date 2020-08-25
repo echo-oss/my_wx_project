@@ -1,0 +1,28 @@
+<!--components/spu-typeOne/index.wxml-->
+<view class="container" bindtap="onTap">
+    <view class="img-container">
+        <image class="img" src="/images/index/banner.jpeg"></image>
+    </view>
+      
+    <view class="left">
+        <text class="title" >{{spu.name}}</text>
+        <view class="tags">
+            <view  class="subtitle" wx:for="{{spu.tag}}">
+                {{item}}
+            </view>
+        </view>
+        <l-price 
+                     value="{{spu.price}}元/平方米起"
+                     color="red"
+                     unit-size="24"
+                     autofix
+                     count-size="30"
+                     l-unit-class="l-price-unit">
+            </l-price>
+        <view class="tags">
+            <l-tag type="reading" bg-color="#DCEBE6" font-color="#157658" size="super-mini" l-class="l-tag" wx:for="{{spu.tag}}">
+                {{item}}
+            </l-tag>
+        </view>
+    </view>
+</view>
