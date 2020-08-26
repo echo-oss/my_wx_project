@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "s-spu-typeOne": "/components/spu-typeOne/index"
+  }
+}

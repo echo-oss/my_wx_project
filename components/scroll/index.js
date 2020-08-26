@@ -19,8 +19,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-   
-
+    onItemTap(event){
+      // wx.navigateTo({
+      //   url: `/pages/subpackages/mall/product/productDetailTypeOne/index?id=${spu.ID}`,
+      // })
+      this.triggerEvent('tapping')
+    },
   },
 
 })

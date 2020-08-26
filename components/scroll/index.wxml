@@ -1,16 +1,21 @@
 <!--components/spu-scroll/index.wxml-->
 <view class="container">
-  <scroll-view scroll-x class="scroll-view">
-    <view class="inner">
-      <block wx:for="{{banner}}" wx:key="index">
-        <view class="spu-container">
-          <!--点击态设置 3ms-->
-          <view hover-class="rect-hover" hover-stay-time="300">
-            <image class="spu-img" src="{{item.src}}" bind:tap="onItemTap" ></image>
-          </view>
-        </view>
-      </block>
-    </view>
-  </scroll-view>
+	<scroll-view scroll-x class="scroll-view">
+		<view class="inner">
+			<block wx:for="{{banner}}" wx:key="index">
+				<view class="spu-container" >
+					<!--点击态设置 3ms-->
+					<view  bindtap="onItemTap">
+						<image class="spu-img" src="{{item.src}}"></image>
+						<view style="font-size:24rpx;font-weight: 400; margin-bottom:6rpx;">{{item.title}}</view>
+						<view style="font-size:24rpx;font-weight: 400; margin-bottom: 6rpx;color: rgba(128, 128, 128, 0.575);">{{item.subtitle}}</view>
+						<l-tag type="reading" bg-color="#DCEBE6" font-color="#157658" size="super-mini" l-class="l-tag" wx:for="{{item.tag}}" wx:key="index">
+							{{item}}
+						</l-tag>
+					</view>
+				</view>
+			</block>
+		</view>
+	</scroll-view>
 
 </view>

@@ -1,0 +1,4 @@
+<!--pages/subpackages//main/houseList/index.wxml-->
+  <block wx:for="{{house}}" wx:key="{{index}}">
+        <s-spu-typeOne spu="{{item}}" bind:tapping="onTap"/> 
+    </block>

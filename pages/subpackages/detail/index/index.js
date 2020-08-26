@@ -5,18 +5,58 @@ Page({
    * 页面的初始数据
    */
   data: {
-    banner:[
+    h:wx.getSystemInfoSync().windowHeight-50,
+    tag:[
+      "住宅","项目在建","装修"
+    ],
+    house:[
       {
-        src:"/pages/subpackages/detail/index/images/banner/house.jpeg"
-      },
-      {
-        src:"/pages/subpackages/detail/index/images/banner/house.jpeg"
-      },
-      {
-        src:"/pages/subpackages/detail/index/images/banner/house.jpeg"
+        src:"images/grid/house.jpeg",
+        name:"融创",
+        price:16500,
+        tag:[
+          "住宅","项目在建","装修"
+        ],
+        subTitle:[
+          "地区","地区","建面"
+        ]
       }
     ],
     bannerG:[
+      {
+        src:"/pages/subpackages/detail/index/images/banner/house.jpeg",
+        title:"面积",
+        subtitle:'暂无价格',
+        tag:[
+          "待售"
+        ]
+      },
+      {
+        src:"/pages/subpackages/detail/index/images/banner/house.jpeg",
+        title:"面积",
+        subtitle:'暂无价格',
+        tag:[
+          "待售"
+        ]
+      },
+      {
+        src:"/pages/subpackages/detail/index/images/banner/house.jpeg",
+        title:"面积",
+        subtitle:'暂无价格',
+        tag:[
+          "待售"
+        ]
+      },
+      {
+        src:"/pages/subpackages/detail/index/images/banner/house.jpeg",
+        title:"面积",
+        subtitle:'暂无价格',
+        tag:[
+          "待售"
+        ]
+      }
+    ],
+    banner:[
       {
         src:"images/scorll/house.jpeg"
       },
@@ -32,8 +72,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad:async function (options) {
   },
 
   /**
@@ -83,5 +122,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  onTap(e){
+    wx.navigateTo({
+      url: `/pages/subpackages/detail/index/index`,
+    })
+  },
+  onBaseMore(){
+    wx.navigateTo({
+      url: `/pages/subpackages/detail/baseMore/index`,
+    })
+  },
+  onCompare(){
+    wx.navigateTo({
+      url: `/pages/subpackages/detail/compare/index`,
+    })
+  },
+  onTap(){
+    wx.navigateTo({
+      url: `/pages/subpackages/detail/index/index`,
+    })
   }
 })

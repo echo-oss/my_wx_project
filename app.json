@@ -6,37 +6,34 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "远方优家",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#aaa",
-    "selectedColor": "#3963BC",
-    "backgroundColor": "black",
-    "borderStyle": "black",
-    "list": [
-      {
-        "pagePath": "pages/navigator/index/index",
-        "text": "车界",
-        "iconPath": "/images/tabBar/base.png",
-        "selectedIconPath": "/images/tabBar/base-select.png"
-      },
-      {
-        "pagePath": "pages/navigator/center/index",
-        "text": "我的",
-        "iconPath": "/images/tabBar/team.png",
-        "selectedIconPath": "/images/tabBar/team-select.png"
-      }
-    ]
   },
   "subPackages": [
     {
-      "root": "pages/subpackages/"  ,
+      "root": "pages/subpackages/detail/",
       "pages": [
-        "detail/index/index"
+        "index/index",
+        "baseMore/index",
+        "compare/index",
+        "compareEnd/index"
+      ]
+    },
+    {
+      "root": "pages/subpackages/main/",
+      "pages": [
+        "houseList/index",
+        "calculator/index",
+        "calculatorEnd/index"
       ]
     }
   ],
+  "usingComponents": {
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "s-spu-typeOne": "/components/spu-typeOne/index",
+    "ff-canvas": "/f2-canvas/f2-canvas",
+    "l-popup": "/miniprogram_npm/lin-ui/popup/index"
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

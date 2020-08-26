@@ -1,0 +1,39 @@
+<view class="container">
+	<form catchsubmit="formSubmit" class="from-container">
+		<view class="from-container">
+			<view class="input-container">
+				<view>总价（万）</view>
+				<input class="input1" name="input" placeholder="这是一个输入框" />
+			</view>
+		</view>
+		<view class="input-container">
+			<view>首付比例</view>
+			<view class="right">
+				<input class="input2" name="input" placeholder="这是一个输入框" />
+				<view>万</view>
+				<input class="input2" name="input" placeholder="这是一个输入框" />
+			</view>
+		</view>
+		<view class="mid">贷款总额0万</view>
+		<view class="input-container">
+			<view>商业贷款</view>
+			<input class="input1" name="input" placeholder="这是一个输入框" />
+		</view>
+		<view class="input-container">
+			<view>商贷利率</view>
+			<input class="input1" name="input" placeholder="这是一个输入框" />
+		</view>
+		<view class="input-container">
+			<view>公积金贷款</view>
+			<input class="input1" name="input" placeholder="这是一个输入框" />
+		</view>
+		<view class="input-container">
+			<view>公积金利率</view>
+			<input class="input1" name="input" placeholder="这是一个输入框" />
+		</view>
+		<view class="mid">首套 ：最高贷款 首套 ：最高贷款首套 ：最高贷款首套 ：最高贷款首套 ：最高贷款首套 ：最高贷款首套 ：最高贷款</view>
+		<view class="btn-area">
+			<button type="primary" formType="submit">开始计算</button>
+		</view>
+	</form>
+</view>

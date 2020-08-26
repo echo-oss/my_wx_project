@@ -11,10 +11,8 @@
     padding: 20rpx;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     border-top: 2px dashed #f5f5f5;
     border-bottom: 2px dashed #f5f5f5;
-    padding-right: 60rpx;
 }
 
 .tags {
@@ -31,6 +29,7 @@
     width: 350rpx;
     display: flex;
     flex-direction: column;
+    margin-left:30rpx ;
 }
 
 .subtitle {
@@ -68,7 +67,7 @@
     margin-left:10rpx;
 }
 .img{
-    width: 260rpx;
+    width: 220rpx;
     height: 180rpx;
 }
 

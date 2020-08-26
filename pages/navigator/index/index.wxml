@@ -1,32 +1,45 @@
 <!--pages/navigator/text/index.wxml-->
+<scroll-view scroll-y style="height:{{h}}px;" scroll-into-view="{{toView}}">
 <view class="container">
-    <swiper class="swiper" indicator-dots indicator-color indicator-active-color="#F0F8FF" autoplay interval="5000"
-            circular>
-        <block wx:for="{{banner}}" wx:key="index">
-            <swiper-item bind:tap="onBanner" data-id="{{item.ID}}">
-                <image class="swiper" src="{{item.src}}"></image>
-            </swiper-item>
-        </block>
-    </swiper>
+	<swiper id='banner' class="swiper" indicator-dots indicator-color indicator-active-color="#F0F8FF" autoplay interval="5000" circular>
+		<block wx:for="{{banner}}" wx:key="index">
+			<swiper-item bind:tap="onBanner" data-id="{{item.ID}}">
+				<image class="swiper" src="{{item.src}}"></image>
+			</swiper-item>
+		</block>
+	</swiper>
 
-    <view class='cu-list grid col-4 no-border inner-container'>
-         <view class='cu-item ' style="height: 160rpx;" wx:if="{{index<11}}" wx:for="{{grid}}" wx:key="index"
-              data-name="文章" data-classid="{{item.ID}}" bindtap='onNaviCard'>
-            <view class='text-shadow '>
-                <image class="img" src="{{item.src}}"></image>
-            </view>
-            <text class="margin">{{item.name}}</text>
-        </view>
+	<view class='cu-list grid col-4 no-border inner-container'>
+		<view class='cu-item ' style="height: 160rpx;" wx:if="{{index<11}}" wx:for="{{grid}}" wx:key="index" data-name="文章" data-classid="{{item.ID}}" bindtap='onNaviCard'>
+			<view class='text-shadow '>
+				<image class="img" src="{{item.src}}"></image>
+			</view>
+			<text class="margin">{{item.name}}</text>
+		</view>
 
-        <view class='cu-item ' style="height: 150rpx;" bindtap='onNaviCard1'>
-            <view class='text-shadow'>
-                <image class="img" src="images/banner/house1.jpeg"></image>
-            </view>
-            <text>房贷计算</text>
-        </view>
-    </view>
-
-     <block wx:for="{{house}}" wx:key="{{index}}">
-        <s-spu-typeOne spu="{{item}}" bind:tapping="onTap"/> 
-    </block>
+		<view class='cu-item ' style="height: 150rpx;" bindtap='onNaviCard1'>
+			<view class='text-shadow'>
+				<image class="img" src="images/banner/house1.jpeg"></image>
+			</view>
+			<text>房贷计算</text>
+		</view>
+	</view>
+	<l-sticky scrollTop="{{scrollTop}}" id='tab'>
+		<l-sticky-item l-header-class="menu">
+			<view slot="header" class="head">
+        <view bindtap="onAre">区域<text class="{{showAre?'fold':'unfold'}}"></text></view>
+         <view>价格</view>
+         <view>户型</view>
+         <view>更多</view>
+      </view>
+			<view slot="body">
+				<block wx:for="{{house}}" wx:key="index">
+					<s-spu-typeOne spu="{{item}}" bind:tapping="onTap" />
+				</block>
+			</view>
+		</l-sticky-item>
+	</l-sticky>
 </view>
+</scroll-view>
+<l-popup show="{{showAre}}" content-align="top" > 
+</l-popup>

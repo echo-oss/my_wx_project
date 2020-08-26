@@ -36,9 +36,10 @@
 }
 
 .spu-img {
-  width: 300rpx;
+  width: 225rpx;
   height: 225rpx;
   border-radius: 20rpx;
+  font-weight: 100;
 }
 
 .spu-text {
@@ -56,4 +57,15 @@
 .price-value {
     font-size: 26rpx !important;/*加!important ，是因为优先级具有不确定性*/
     color: #157658 !important;
+}
+.spu-container .title{
+  font-size:24rpx;
+  font-weight: 400; 
+  margin-bottom: 6rpx;
+}
+.spu-container .sub-title{
+  font-size:24rpx;
+  font-weight: 400; 
+  margin-bottom: 6rpx;
+  color: rgba(128, 128, 128, 0.575);
 }

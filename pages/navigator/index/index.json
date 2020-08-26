@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "s-spu-typeOne": "/components/spu-typeOne/index"
+    "s-spu-typeOne": "/components/spu-typeOne/index",
+    "l-sticky": "/miniprogram_npm/lin-ui/sticky/index",
+    "l-sticky-item": "/miniprogram_npm/lin-ui/sticky-item/index"      
   }
 }

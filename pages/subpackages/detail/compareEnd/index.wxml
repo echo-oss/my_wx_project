@@ -1,0 +1,22 @@
+<!--pages/subpackages/cars/pages/auto-contrast/index.wxml-->
+<view class="wrapper" >
+  <block wx:for='{{1}}' wx:key wx:for-item='config'>
+    <view class="main">
+      <view wx:for="{{1}}" wx:key wx:for-item="listItem">
+        <!-- <view class='top'>{{item.name}}</view> -->
+        <view class="left">
+          <block wx:for="{{configs}}" wx:key wx:for-item='detail' data-detail="{{detail}}">
+            <view class="th">{{detail.text}}</view>
+          </block>
+        </view>
+        <view class="right">
+          <view class="right-wrapper">
+            <view class='wrapperbox' wx:for="{{configs[0].value}}" wx:for-index='indexR' wx:key>
+              <view class='td' wx:for="{{configs}}" wx:key wx:for-item='confitem'>{{confitem.value[indexR]}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

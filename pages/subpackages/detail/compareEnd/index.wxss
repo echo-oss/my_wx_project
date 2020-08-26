@@ -1,0 +1,88 @@
+/* pages/subpackages/detail//compareEnd/index.wxss */
+/* pages/subpackages/cars/pages/auto-contrast/index.wxss */
+.box{
+  height: 300rpx;
+  box-shadow: 0 0 10rpx rgba(0, 102, 204, 0.2);
+
+}
+.selectbox{
+  height: 300rpx;
+  box-shadow: 0 0 10rpx rgba(5, 126, 247, 0.938);
+}
+/* 悬浮功能块 */
+
+.function {
+  position: fixed;
+  bottom: 200rpx;
+  right: 80rpx;
+  z-index: 1024;
+  
+}
+
+
+.wrapperbox{
+  display: inline-flex;
+  flex-direction: column;
+}
+.th{
+  display: flex;
+  flex-direction: column;
+  width: 200rpx;
+  height: 130rpx;
+  border-right: 1rpx solid rgba(218, 217, 217, 1); 
+  border-bottom: 1rpx solid rgba(218, 217, 217, 1); 
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  white-space: normal;
+  padding: 10px;
+}
+.td{
+  display: flex;
+  flex-direction: column;
+  width: 350rpx;
+  height: 130rpx;
+  border-right: 1rpx solid rgba(218, 217, 217, 1); 
+  border-bottom: 1rpx solid rgba(218, 217, 217, 1); 
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  white-space: normal;
+  padding: 10px;
+}
+.th view{
+padding: 10px;
+margin: 10px;
+}
+
+
+
+
+.wrapper{
+    /* padding-top: 50rpx; */
+    /* overflow-x: hidden; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.top{
+  position: fixed;
+  background-color: white;
+  
+}
+.left{
+    position: absolute;
+    width: 300rpx;
+    height: 400rpx;
+}
+.right{
+    padding-left: 210rpx;
+    background-color: white
+}
+.right-wrapper{
+    /* width: 1000rpx; */
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    
+}

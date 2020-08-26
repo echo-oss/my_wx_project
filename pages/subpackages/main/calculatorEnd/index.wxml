@@ -1,0 +1,5 @@
+<!--pages/subpackages/main/calculatorEnd/index.wxml-->
+ <view class="container-box" >
+    <ff-canvas id="custom-dom" canvas-id="custom-dom"></ff-canvas>
+  </view>
+

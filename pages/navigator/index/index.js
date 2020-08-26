@@ -4,6 +4,8 @@ const app = getApp()
 
 Page({
   data: {
+    toView: 'banner',
+    h:wx.getSystemInfoSync().windowHeight,
     banner:[
       {
         src:"images/banner/house.jpeg"
@@ -40,6 +42,72 @@ Page({
         subTitle:[
           "地区","地区","建面"
         ]
+      },
+      {
+        src:"images/grid/house.jpeg",
+        name:"融创",
+        price:16500,
+        tag:[
+          "住宅","项目在建","装修"
+        ],
+        subTitle:[
+          "地区","地区","建面"
+        ]
+      },
+      {
+        src:"images/grid/house.jpeg",
+        name:"融创",
+        price:16500,
+        tag:[
+          "住宅","项目在建","装修"
+        ],
+        subTitle:[
+          "地区","地区","建面"
+        ]
+      },
+      {
+        src:"images/grid/house.jpeg",
+        name:"融创",
+        price:16500,
+        tag:[
+          "住宅","项目在建","装修"
+        ],
+        subTitle:[
+          "地区","地区","建面"
+        ]
+      },
+      {
+        src:"images/grid/house.jpeg",
+        name:"融创",
+        price:16500,
+        tag:[
+          "住宅","项目在建","装修"
+        ],
+        subTitle:[
+          "地区","地区","建面"
+        ]
+      },
+      {
+        src:"images/grid/house.jpeg",
+        name:"融创",
+        price:16500,
+        tag:[
+          "住宅","项目在建","装修"
+        ],
+        subTitle:[
+          "地区","地区","建面"
+        ]
+      },
+      {
+        src:"images/grid/house.jpeg",
+        name:"融创",
+        price:16500,
+        tag:[
+          "住宅","项目在建","装修"
+        ],
+        subTitle:[
+          "地区","地区","建面"
+        ]
       }
     ]
   },
@@ -53,4 +121,23 @@ Page({
       url: `/pages/subpackages/detail/index/index`,
     })
   },
+  onNaviCard(){
+    wx.navigateTo({
+      url: `/pages/subpackages/main/houseList/index`,
+    })
+  },
+  onNaviCard1(){
+    wx.navigateTo({
+      url: `/pages/subpackages/main/calculator/index`,
+    })
+  },
+  onPageScroll(res) {
+    wx.lin.setScrollTop(res.scrollTop)
+  },
+  onAre(){
+    this.setData({
+      showAre:true,
+      toView: 'tab'
+    })
+  }
 })

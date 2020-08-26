@@ -1,17 +1,77 @@
 <!--pages/navigator/text/index.wxml-->
+<scroll-view scroll-y style="height:{{h}}px;">
 <view class="container">
-    <swiper class="swiper" indicator-dots indicator-color indicator-active-color="#F0F8FF" autoplay interval="5000"
-            circular>
-        <block wx:for="{{banner}}" wx:key="index">
-            <swiper-item bind:tap="onBanner" data-id="{{item.ID}}">
-                <image class="swiper" src="{{item.src}}"></image>
-            </swiper-item>
-        </block>
-    </swiper>
-    <view></view>
-    <view></view>
-     <view>
-     <view></view>
-      <s-hot-scroll banner="{{bannerG}}"></s-hot-scroll>
-    </view>
+	<swiper class="swiper" indicator-dots indicator-color indicator-active-color="#F0F8FF" autoplay interval="5000" circular>
+		<block wx:for="{{banner}}" wx:key="index">
+			<swiper-item  bind:tap="onBanner" data-id="{{item.ID}}">
+				<image class="swiper" src="{{item.src}}"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="cuIcon-album pos" bindtap="onCompare"></view>
+	<!-- 房屋详情 -->
+	<view class="t-container">
+		<view class="title">中北生态园</view>
+		<view>副标题</view>
+		<view class="price-container">
+			<view class="text-red price">16000</view>
+			<view class="text-red sub-price">元/㎡</view>
+		</view>
+	</view>
+	<!-- 房屋详情 -->
+	<view class="t-container">
+		<view class="top-container">
+			<view class="left">基础信息</view>
+			<view class="right">
+				<view bindtap="onBaseMore">查看更多</view>
+				<view class="cuIcon-right"></view>
+			</view>
+        </view>
+		<view class="down-container">
+           <view class="tags">
+                <l-tag type="reading" bg-color="#DCEBE6" font-color="#157658" size="mini" l-class="l-tag" wx:for="{{tag}}" wx:key="index">
+				    {{item}}
+			    </l-tag>
+            </view>	
+            <view class="tip">
+				<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘</view>
+				<view >开盘信息</view>
+			</view>
+            <view class="tip">
+				<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型</view>
+				<view >户型信息</view>
+			</view>
+            <view class="tip">
+				<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址</view>
+				<view >地址信息</view>
+			</view>
+		</view>
+	</view>
+	<!-- 房屋详情 -->
+	<view>
+		<view class="top">
+			<view class="left">主力户型</view>
+		</view>
+		<s-scroll bind:tapping="onTap" banner="{{bannerG}}"></s-scroll>
+	</view>
+	<!-- 猜你喜欢 -->
+	<view>
+		<view class="top">
+			<view class="left">猜你喜欢</view>
+		</view>
+		<block wx:for="{{house}}" wx:key="index">
+			<s-spu-typeOne spu="{{item}}" bind:tapping="onTap" />
+		</block>
+	</view>
 </view>
+</scroll-view>
+<!-- 底部tap -->
+ <view class="cu-bar bg-white tabbar border shop tapbar">
+    <view class="action">
+      <view class="cuIcon-like">
+      </view>
+      关注
+    </view>
+    <view class="bg-orange submit">微聊</view>
+    <view class="bg-red submit">致电</view>
+  </view>

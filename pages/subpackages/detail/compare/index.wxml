@@ -1,0 +1,19 @@
+<scroll-view scroll-y style="height:{{h}}px;">
+<view class="cu-list menu">
+	<block wx:for='{{house}}' wx:key>
+		<view class="cu-item " bindtap='onSelectedTap' data-index='{{index}}'>
+			<view class="content ">
+				<view class="text-black  text-bold">
+					<text style="font-size:36rpx"  class=" {{item.selected? 'text-red cuIcon-roundcheckfill':'text-grey  cuIcon-roundcheck'}} ">
+          </text>
+			    <s-spu-typeOne spu="{{item}}" bind:tapping="onTap" />
+          </view>
+				</view>
+			</view>
+	</block>
+</view>
+</scroll-view>
+<!-- 对比悬浮框 -->
+<view class="cu-bar bg-white tabbar border shop tapbar">
+    <view class="bg-red submit" bindtap="onCompare">开始对比</view>
+  </view>

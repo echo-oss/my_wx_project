@@ -1,0 +1,95 @@
+	<view class="container">
+
+		<view class="t-container">
+			<view class="top-container">
+				<view class="left">基础信息</view>
+			</view>
+			<view class="down-container">
+				<view class="tags">
+					<l-tag type="reading" bg-color="#DCEBE6" font-color="#157658" size="mini" l-class="l-tag" wx:for="{{tag}}" wx:key>
+						{{item}}
+					</l-tag>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘:</view>
+					<view>开盘信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型:</view>
+					<view>户型信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址:</view>
+					<view>地址信息</view>
+				</view>
+			</view>
+		</view>
+
+
+    <view class="t-container">
+			<view class="top-container" style="border-bottom:0.5px solid rgb(223, 223, 223);padding-bottom:6rpx; ">
+				<view class="left" >销售信息</view>
+			</view>
+			<view class="down-container">
+				<view class="tags">
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘:</view>
+					<view>开盘信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型:</view>
+					<view>户型信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址:</view>
+					<view>地址信息</view>
+				</view>
+			</view>
+		</view>
+
+<view class="t-container">
+			<view class="top-container" style="border-bottom:0.5px solid rgb(223, 223, 223);padding-bottom:6rpx; ">
+				<view class="left" >建筑规划</view>
+			</view>
+			<view class="down-container">
+				<view class="tags">
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘:</view>
+					<view>开盘信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型:</view>
+					<view>户型信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址:</view>
+					<view>地址信息</view>
+				</view>
+			</view>
+		</view>
+
+
+    <view class="t-container">
+			<view class="top-container" style="border-bottom:0.5px solid rgb(223, 223, 223);padding-bottom:6rpx; ">
+				<view class="left" >物业信息</view>
+			</view>
+			<view class="down-container">
+				<view class="tags">
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘:</view>
+					<view>开盘信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型:</view>
+					<view>户型信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址:</view>
+					<view>地址信息</view>
+				</view>
+			</view>
+		</view>
+	</view>
