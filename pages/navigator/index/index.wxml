@@ -1,45 +1,161 @@
-<!--pages/navigator/text/index.wxml-->
-<scroll-view scroll-y style="height:{{h}}px;" scroll-into-view="{{toView}}">
-<view class="container">
-	<swiper id='banner' class="swiper" indicator-dots indicator-color indicator-active-color="#F0F8FF" autoplay interval="5000" circular>
-		<block wx:for="{{banner}}" wx:key="index">
-			<swiper-item bind:tap="onBanner" data-id="{{item.ID}}">
-				<image class="swiper" src="{{item.src}}"></image>
-			</swiper-item>
-		</block>
-	</swiper>
+<!--pages/navigator/text/index.wxml--> 
+  <scroll-view scroll-y style="height:{{h}}px; " scroll-into-view="{{toView}}" bindscroll="scroll">
+	<view class="container">
+		<swiper id='banner' class="swiper" indicator-dots indicator-color indicator-active-color="#F0F8FF" autoplay interval="5000" circular>
+			<block wx:for="{{banner}}" wx:key="index">
+				<swiper-item bind:tap="onBanner" data-id="{{item.ID}}">
+					<image class="swiper" src="{{item.src}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
 
-	<view class='cu-list grid col-4 no-border inner-container'>
-		<view class='cu-item ' style="height: 160rpx;" wx:if="{{index<11}}" wx:for="{{grid}}" wx:key="index" data-name="文章" data-classid="{{item.ID}}" bindtap='onNaviCard'>
-			<view class='text-shadow '>
-				<image class="img" src="{{item.src}}"></image>
+		<view class='cu-list grid col-4 no-border inner-container'>
+			<view class='cu-item ' style="height: 160rpx;" wx:if="{{index<11}}" wx:for="{{grid}}" wx:key="index" data-name="文章" data-classid="{{item.ID}}" bindtap='onNaviCard'>
+				<view class='text-shadow '>
+					<image class="img" src="{{item.src}}"></image>
+				</view>
+				<text class="margin">{{item.name}}</text>
 			</view>
-			<text class="margin">{{item.name}}</text>
-		</view>
 
-		<view class='cu-item ' style="height: 150rpx;" bindtap='onNaviCard1'>
-			<view class='text-shadow'>
-				<image class="img" src="images/banner/house1.jpeg"></image>
+			<view class='cu-item ' style="height: 150rpx;" bindtap='onNaviCard1'>
+				<view class='text-shadow'>
+					<image class="img" src="images/banner/house1.jpeg"></image>
+				</view>
+				<text>房贷计算</text>
 			</view>
-			<text>房贷计算</text>
 		</view>
+		<l-sticky scrollTop="{{scrollTop}}" id='tab'>
+			<l-sticky-item l-header-class="menu">
+				<view slot="header" class="head">
+					<view bindtap="onAre">区域</view>
+					<view bindtap="onPrice">价格</view>
+					<view bindtap="onHouse">户型</view>
+					<view bindtap="onMore">更多</view>
+				</view>
+				<view slot="body">
+					<block wx:for="{{house}}" wx:key="index">
+						<s-spu-typeOne spu="{{item}}" bind:tapping="onTap" />
+					</block>
+				</view>
+			</l-sticky-item>
+		</l-sticky>
 	</view>
-	<l-sticky scrollTop="{{scrollTop}}" id='tab'>
-		<l-sticky-item l-header-class="menu">
-			<view slot="header" class="head">
-        <view bindtap="onAre">区域<text class="{{showAre?'fold':'unfold'}}"></text></view>
-         <view>价格</view>
-         <view>户型</view>
-         <view>更多</view>
-      </view>
-			<view slot="body">
-				<block wx:for="{{house}}" wx:key="index">
-					<s-spu-typeOne spu="{{item}}" bind:tapping="onTap" />
-				</block>
-			</view>
-		</l-sticky-item>
-	</l-sticky>
-</view>
 </scroll-view>
-<l-popup show="{{showAre}}" content-align="top" > 
+<!-- 区域 -->
+<l-popup show="{{showAre}}" content-align="top">
+		<view class="popup">
+	<view class="main">
+      <l-segment 
+                height="600"
+                 item-height="90"
+                 even="{{false}}"
+                 width="180"
+                 l-class="segment-view"
+                 l-active-class="segment-item-active"
+                 l-inactive-class="segment-item"
+                 l-line-class="l-seg-line"
+                 placement="left"
+                 bind:linchange="changeTabs">
+        <l-segment-item  wx:for="{{areTitle}}" tab="{{item.content}}" key="{{index}}"/>
+      </l-segment>
+      <view class="p-container" >
+        <scroll-view style="height:600rpx;" scroll-y bindscrolltolower="scrolltolower">
+				   <view class="content2" wx:for="{{areTitle[Tab].subTitle}}" bindtap="onContent" data-index="{{index}}" wx:key="index"  style="{{tabIndex==index?'color: #157658':''}}">
+					 {{item}}
+					 </view>
+        </scroll-view>
+      </view>
+  </view>
+	<button bindtap="submit">确定</button>
+	</view>
+</l-popup>
+
+<!-- 价格 -->
+<l-popup show="{{showPrice}}" content-align="top">
+		<view class="popup">
+	<view class="main">
+      <l-segment 
+                height="600"
+                 item-height="90"
+                 even="{{false}}"
+                 width="180"
+                 l-class="segment-view"
+                 l-active-class="segment-item-active"
+                 l-inactive-class="segment-item"
+                 l-line-class="l-seg-line"
+                 placement="left"
+                 bind:linchange="changeTabs">
+        <l-segment-item  wx:for="{{priceTitle}}" tab="{{item.content}}" key="{{index}}"/>
+      </l-segment>
+
+      <view class="p-container" >
+        <scroll-view style="height:600rpx;" scroll-y bindscrolltolower="scrolltolower">
+				   <view class="content2" wx:for="{{priceTitle[Tab].subTitle}}" bindtap="onContent" data-index="{{index}}" wx:key="index"  style="{{tabIndex==index?'color: #157658':''}}">
+					 {{item}}
+					 </view>
+        </scroll-view>
+      </view>
+  </view>
+	<button bindtap="submit">确定</button>
+	</view>
+</l-popup>
+
+<!-- 户型 -->
+<l-popup show="{{showHouse}}" content-align="top">
+		<view class="popup">
+	<view class="main">
+      <l-segment 
+                height="600"
+                 item-height="90"
+                 even="{{false}}"
+                 width="180"
+                 l-class="segment-view"
+                 l-active-class="segment-item-active"
+                 l-inactive-class="segment-item"
+                 l-line-class="l-seg-line"
+                 placement="left"
+                 bind:linchange="changeTabs">
+        <l-segment-item  wx:for="{{houseTitle}}" tab="{{item.content}}" key="{{index}}"/>
+      </l-segment>
+
+      <view class="p-container" >
+        <scroll-view style="height:600rpx;" scroll-y bindscrolltolower="scrolltolower">
+				   <view class="content2" wx:for="{{houseTitle[Tab].subTitle}}" bindtap="onContent" data-index="{{index}}" wx:key="index"  style="{{tabIndex==index?'color: #157658':''}}">
+					 {{item}}
+					 </view>
+        </scroll-view>
+      </view>
+  </view>
+	<button bindtap="submit">确定</button>
+	</view>
+</l-popup>
+
+<!-- 更多 -->
+<l-popup show="{{showMore}}" content-align="top">
+	<view class="popup">
+	<view class="main">
+      <l-segment 
+                height="600"
+                 item-height="90"
+                 even="{{false}}"
+                 width="180"
+                 l-class="segment-view"
+                 l-active-class="segment-item-active"
+                 l-inactive-class="segment-item"
+                 l-line-class="l-seg-line"
+                 placement="left"
+                 bind:linchange="changeTabs">
+        <l-segment-item  wx:for="{{moreTitle}}" tab="{{item.content}}" key="{{index}}"/>
+      </l-segment>
+
+      <view class="p-container" >
+        <scroll-view style="height:600rpx;" scroll-y bindscrolltolower="scrolltolower">
+				   <view class="content2" wx:for="{{moreTitle[Tab].subTitle}}" bindtap="onContent" data-index="{{index}}" wx:key="index"  style="{{tabIndex==index?'color: #157658':''}}">
+					 {{item}}
+					 </view>
+        </scroll-view>
+      </view>
+  </view>
+	<button bindtap="submit">确定</button>
+	</view>
 </l-popup>

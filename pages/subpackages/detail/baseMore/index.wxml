@@ -34,16 +34,20 @@
 				<view class="tags">
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘:</view>
-					<view>开盘信息</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">参考单价:</view>
+					<view>单价信息</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型:</view>
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">楼盘总价:</view>
+					<view>总价信息</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">在售户型:</view>
 					<view>户型信息</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址:</view>
-					<view>地址信息</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">售楼地址:</view>
+					<view>武清区二号线</view>
 				</view>
 			</view>
 		</view>
@@ -56,16 +60,16 @@
 				<view class="tags">
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘:</view>
-					<view>开盘信息</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">建筑类型:</view>
+					<view>住宅：高层</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型:</view>
-					<view>户型信息</view>
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">产权年限:</view>
+					<view>住宅70年</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址:</view>
-					<view>地址信息</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">装修标准:</view>
+					<view>带装修</view>
 				</view>
 			</view>
 		</view>
@@ -79,16 +83,16 @@
 				<view class="tags">
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘:</view>
-					<view>开盘信息</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">物 业 费:</view>
+					<view>住宅：2.5元/平米/月</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型:</view>
-					<view>户型信息</view>
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">物业公司:</view>
+					<view>金碧物业有限公司</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址:</view>
-					<view>地址信息</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">车位数:</view>
+					<view>1760</view>
 				</view>
 			</view>
 		</view>

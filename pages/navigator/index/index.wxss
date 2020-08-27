@@ -152,3 +152,109 @@
   width: 100%;
   background-color: white !important;
 }
+.list-container{
+
+}
+.popup{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100rpx;
+  margin-bottom:50rpx ;
+  background-color: white;
+}
+.list-container{
+  border-top: 1rpx solid rgb(221, 221, 221);
+  display: flex;
+  flex-direction: row;
+}
+.li-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+}
+.content{
+  margin: 0;
+  width: 50%;
+  padding:30rpx;
+  border-bottom: 1rpx solid rgb(221, 221, 221);
+  border-right: 1rpx solid rgb(221, 221, 221);
+}
+.content2{
+  margin: 0;
+  padding:30rpx;
+  border-bottom: 1rpx solid rgb(221, 221, 221);
+  border-right: 1rpx solid rgb(221, 221, 221);
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 2rpx solid #f3f3f3;
+  background-color: white;
+}
+.container{
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+.search-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-btn{
+  background-color: #f1f1f1 !important;
+  color: #C4C9D2 !important;
+  font-size: 24rpx !important;
+  font-weight: 400 !important;
+  border-radius: 40rpx !important;
+  justify-content: start !important;
+  padding-left: 20px !important;
+}
+.segment-view{
+ border-right: 2rpx solid #f3f3f3 ;
+ 
+}
+.segment-item-active {
+  color: #157658 !important;
+  font-size: 26rpx !important;
+}
+.segment-item {
+  color: #666666 !important;
+  /* background-color: #f3f3f3 !important; */
+  font-size: 26rpx !important;
+}
+
+.l-seg-line{
+  width: 8rpx !important;
+  height: 40rpx !important;
+  background-color: #157658 !important;
+
+}
+
+.p-container{
+width: 590rpx
+}
+
+/**/
+
+.right-card{
+width: 150rpx !important;
+height: 150rpx !important;
+}
+.subtitle{
+  font-size: 24rpx;
+  font-weight: 300;
+  margin-top: 6rpx;
+  color: #888;
+  word-break:break-all;/* 小程序view英文数字不换行的问题 */
+}
+.cart-container{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+}

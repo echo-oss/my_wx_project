@@ -4,8 +4,72 @@ const app = getApp()
 
 Page({
   data: {
+    tabIndex:0,
+    istap:false,
+    Tab:0,
+    showMore:false,
+    showAre:false,
+    showPrice:false,
+    showHouse:false,
     toView: 'banner',
     h:wx.getSystemInfoSync().windowHeight,
+    moreTitle:[
+      {
+        content:"物业类型",
+        subTitle:[
+          "住宅","商住","别墅"
+        ]
+      },
+      {
+        content:"面积",
+        subTitle:[
+          "60","80","100"
+        ]
+      }
+    ],
+    areTitle:[
+      {
+        content:"区域",
+        subTitle:[
+          "不限","滨海新区","西青","武清","东丽","津南"
+          ,"河东","北辰","河西"
+        ]
+      },
+      {
+        content:"地铁",
+        subTitle:[
+          "1号线","2号线","3号线","4号线","5号线","6号线","9号线"
+        ]
+      }
+    ],
+    priceTitle:[
+      {
+        content:"单价",
+        subTitle:[
+          "不限","1万以下","1-2万"
+        ]
+      },
+      {
+        content:"总价",
+        subTitle:[
+          "不限","80万以下","80-150万"
+        ]
+      }
+    ],
+    houseTitle:[
+      {
+        content:"高层",
+        subTitle:[
+          "一室一厅","两室一厅","三室一厅"
+        ]
+      },
+      {
+        content:"老居民楼",
+        subTitle:[
+          "一室一厅","两室一厅","三室一厅"
+        ]
+      }
+    ],
     banner:[
       {
         src:"images/banner/house.jpeg"
@@ -131,13 +195,64 @@ Page({
       url: `/pages/subpackages/main/calculator/index`,
     })
   },
-  onPageScroll(res) {
-    wx.lin.setScrollTop(res.scrollTop)
+  // onPageScroll(res) {
+  //   console.log(res)
+  //   wx.lin.setScrollTop(res.scrollTop)
+  // },
+  scroll(res){
+    wx.lin.setScrollTop(res.detail.scrollTop)
   },
   onAre(){
     this.setData({
-      showAre:true,
+      showAre:!this.data.showAre,
+      showMore:false,
+      showHouse:false,
+      showPrice:false,
       toView: 'tab'
     })
+  },
+  onMore(){
+    this.setData({
+      showMore:!this.data.showMore,
+      showHouse:false,
+      showAre:false,
+      showPrice:false,
+      toView: 'tab'
+    })
+  },
+  onPrice(){
+    this.setData({
+      showMore:false,
+      showHouse:false,
+      showAre:false,
+      showPrice:!this.data.showPrice,
+      toView: 'tab'
+    })
+  },
+   onHouse(){
+    this.setData({
+      showMore:false,
+      showHouse:!this.data.showHouse,
+      showAre:false,
+      showPrice:false,
+      toView: 'tab'
+    })
+  },
+  submit(){
+    wx.navigateTo({
+      url: `/pages/subpackages/main/houseList/index`,
+    })
+  },
+  changeTabs(e){
+    let Tab = e.detail.activeKey
+    this.setData({
+      Tab:Tab
+    })
+  },
+  onContent(e){
+  
+      this.setData({
+        tabIndex:e.currentTarget.dataset.index
+      })
   }
 })

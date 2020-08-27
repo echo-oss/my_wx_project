@@ -3,15 +3,15 @@
 		<view class="from-container">
 			<view class="input-container">
 				<view>总价（万）</view>
-				<input class="input1" name="input" placeholder="这是一个输入框" />
+				<input class="input1" name="input" placeholder="0" />
 			</view>
 		</view>
 		<view class="input-container">
 			<view>首付比例</view>
 			<view class="right">
-				<input class="input2" name="input" placeholder="这是一个输入框" />
+				<input class="input2" name="input" placeholder="0" />
 				<view>万</view>
-				<input class="input2" name="input" placeholder="这是一个输入框" />
+				<input class="input2" name="input" placeholder="0" />
 			</view>
 		</view>
 		<view class="mid">贷款总额0万</view>

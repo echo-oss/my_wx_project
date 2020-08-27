@@ -1,5 +1,6 @@
 .input1{
   border-bottom:1px solid rgb(194, 193, 193);
+  text-align: center;
 }
 .input-container{
   margin: 40rpx;
@@ -35,5 +36,7 @@
 }
 .input2{
   border-bottom:1px solid rgb(194, 193, 193);
-  width:180rpx;
+  width:170rpx;
+  margin: 10rpx;
+  text-align: center;
 }
