@@ -1,0 +1,29 @@
+/* pages/subpackages/crm/pages/customer-look-details/index.wxss */
+
+.container{
+  min-height: 80vh;
+  background-color: white;
+  padding-top: 30rpx;
+  margin-top: 1px;
+}
+
+.container-item{
+  display: flex;
+  margin: 25rpx 0;
+  font-size: 24rpx;
+}
+.name{
+  width: 160rpx;
+   color: #808080;
+  text-align: center;
+}
+.detail{
+  flex: 1;
+  color: #333;
+  padding-right: 40rpx;
+}
+.time{
+  width: 160rpx;
+   color: #808080;
+  text-align: center;
+}

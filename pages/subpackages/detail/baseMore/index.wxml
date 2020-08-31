@@ -1,5 +1,4 @@
 	<view class="container">
-
 		<view class="t-container">
 			<view class="top-container">
 				<view class="left">基础信息</view>
@@ -11,50 +10,62 @@
 					</l-tag>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开盘:</view>
-					<view>开盘信息</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">销售状态:</view>
+					<view>在售</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165); margin-right:20rpx">户型:</view>
-					<view>户型信息</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">最新开盘:</view>
+					<view>2019年07月31日</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地址:</view>
-					<view>地址信息</view>
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">交房时间:</view>
+					<view>2021年10月31日</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">环线配置:</view>
+					<view>中至外环</view>
+				</view>
+				<view class="tip">
+					<view style="width:22%;color: rgb(167, 165, 165);margin-right:20rpx">楼盘地址:</view>
+					<view>[河北-金钟河大街]群芳路与靖江北路交口东北侧</view>
 				</view>
 			</view>
 		</view>
 
 
-    <view class="t-container">
+		<view class="t-container">
 			<view class="top-container" style="border-bottom:0.5px solid rgb(223, 223, 223);padding-bottom:6rpx; ">
-				<view class="left" >销售信息</view>
+				<view class="left">销售信息</view>
 			</view>
 			<view class="down-container">
 				<view class="tags">
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">参考单价:</view>
-					<view>单价信息</view>
+					<view>住宅最低29700元/平方米起(均价32700元/平方米)</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165); margin-right:20rpx">楼盘总价:</view>
-					<view>总价信息</view>
+					<view>住宅总价246万元/套起</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">优惠折扣:</view>
+					<view>购买优惠券享房款18万元优惠</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">在售户型:</view>
-					<view>户型信息</view>
+					<view>2室户型，3室户型，4室户型</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">售楼地址:</view>
-					<view>武清区二号线</view>
+					<view>金钟河大街与红波路交口花语津郡营销中心</view>
 				</view>
 			</view>
 		</view>
 
-<view class="t-container">
+		<view class="t-container">
 			<view class="top-container" style="border-bottom:0.5px solid rgb(223, 223, 223);padding-bottom:6rpx; ">
-				<view class="left" >建筑规划</view>
+				<view class="left">建筑规划</view>
 			</view>
 			<view class="down-container">
 				<view class="tags">
@@ -68,31 +79,115 @@
 					<view>住宅70年</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">装修标准:</view>
-					<view>带装修</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开 发 商 :</view>
+					<view>中铁房地产兴泰(天津)置业有限公司</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">投 资 商 :</view>
+					<view>中铁房地产集团商业地产开发管理有限公司</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">容 积 率 :</view>
+					<view>住 宅 :2.34</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">绿 化 率 :</view>
+					<view>达35%</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">规划用户
+						:</view>
+					<view>800户</view>
+				</view>
+				<view class="tip">
+					<view style="width:48%;color: rgb(167, 165, 165);margin-right:20rpx">楼层状况
+						:</view>
+					<view>一共规划为8栋楼，3#-8#为高层，均为31层到 顶，两梯四户，南北朝向;1#-2#为洋房，7层到
+顶。</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">占地面积
+						:</view>
+					<view>37000平方米</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">建筑面积
+						:</view>
+					<view>121600平方米</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">工程进度:</view>
+					<view>在建中</view>
 				</view>
 			</view>
 		</view>
 
 
-    <view class="t-container">
+		<view class="t-container">
 			<view class="top-container" style="border-bottom:0.5px solid rgb(223, 223, 223);padding-bottom:6rpx; ">
-				<view class="left" >物业信息</view>
+				<view class="left">物业信息</view>
 			</view>
 			<view class="down-container">
 				<view class="tags">
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">物 业 费:</view>
-					<view>住宅：2.5元/平米/月</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">物 业 费 :</view>
+					<view>住 宅 :3.1元/平米/月</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165); margin-right:20rpx">物业公司:</view>
-					<view>金碧物业有限公司</view>
+					<view>中国铁建物业管理有限公司</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">车位数:</view>
-					<view>1760</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">车 位 数 :</view>
+					<view>871个
+					</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">车 位 比 :</view>
+					<view>比值：1:1.1 </view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地下车位数:</view>
+					<view>871个</view>
+				</view>
+			</view>
+		</view>
+		<view class="t-container">
+			<view class="top-container" style="border-bottom:0.5px solid rgb(223, 223, 223);padding-bottom:6rpx; ">
+				<view class="left">预售许可证</view>
+			</view>
+			<view class="down-container">
+				<view class="tags">
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">预售证号:</view>
+					<view>津国土房售许字[2019]第0961号</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">发证日期:</view>
+					<view>2019年08月30日</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">绑定楼栋:</view>
+					<view>暂无</view>
+				</view>
+			</view>
+
+			<view class="down-container" style="margin-top:20rpx">
+				<view class="tags">
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">预售证号:</view>
+					<view>津国土房售许字[2019]第0961—001号</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165); margin-right:20rpx">发证日期:</view>
+					<view>暂无</view>
+				</view>
+				<view class="tip">
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">绑定楼栋:</view>
+					<view>暂无</view>
 				</view>
 			</view>
 		</view>

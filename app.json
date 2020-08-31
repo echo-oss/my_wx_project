@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/navigator/index/index",
-    "pages/navigator/center/index"
+    "pages/navigator/center/index",
+    "pages/navigator/my/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,8 +27,36 @@
         "calculator/index",
         "calculatorEnd/index"
       ]
+    },
+    {
+      "root": "pages/subpackages/my/",
+      "pages": [
+        "myClient/index",
+        "myDetail/index",
+        "lookDetail/index"
+      ]
     }
   ],
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#3963BC",
+    "backgroundColor": "black",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/navigator/index/index",
+        "text": "房屋",
+        "iconPath": "/images/tabbar/base.png",
+        "selectedIconPath": "/images/tabbar/base-select.png"
+      },
+      {
+        "pagePath": "pages/navigator/my/index",
+        "text": "我的",
+        "iconPath": "/images/tabbar/team.png",
+        "selectedIconPath": "/images/tabbar/team-select.png"
+      }
+    ]
+  },
   "usingComponents": {
     "l-tag": "/miniprogram_npm/lin-ui/tag/index",
     "s-spu-typeOne": "/components/spu-typeOne/index",

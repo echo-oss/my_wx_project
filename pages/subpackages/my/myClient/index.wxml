@@ -1,0 +1,19 @@
+<view class='container'>
+  <view class='sub-container'>
+    <view class="cu-list menu text-left">
+      <view class='cu-item flex'>
+        <view class='action flex-sub'>客户</view>
+        <view class='action flex-sub'>姓名</view>
+        <view class='action flex-sub'>手机号</view>
+      </view>
+      <view class="cu-item flex" wx:for="{{dataArray}}" wx:key bindtap="onTap" data-index='{{index}}'>
+        <view class="flex-sub">
+        <!-- <view class=" cu-avatar  round " style="background-image:url({{item.src}});"></view> -->
+        <image class="cu-avatar  round" src="{{item.src}}"></image>
+        </view>   
+        <text class='action flex-sub'>{{item.name ? item.name:'暂无'}}</text>
+        <view class='action flex-sub'>{{item.phone?item.phone :'暂无'}}</view>
+      </view>
+    </view>
+  </view>
+</view>

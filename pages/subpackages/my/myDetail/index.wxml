@@ -1,0 +1,218 @@
+<scroll-view scroll-x class="bg-white nav text-center">
+	<view class="cu-item {{0==NavCur?'text-blue cur':''}}" bindtap="navSelect" data-id="0">
+		<text class="cuIcon-form"></text> 用户画像
+	</view>
+	<view class="cu-item {{1==NavCur?'text-blue cur':''}}" bindtap="navSelect" data-id="1">
+		<text class="cuIcon-upstage"></text> 近期试算
+	</view>
+	<view class="cu-item {{3==NavCur?'text-blue cur':''}}" bindtap="navSelect" data-id="3">
+		<text class="cuIcon-comment"></text> 浏览轨迹
+	</view>
+	<view class="cu-item {{4==NavCur?'text-blue cur':''}}" bindtap="navSelect" data-id="4">
+		<text class="cuIcon-comment"></text> 对比记录
+	</view>
+</scroll-view>
+
+
+
+<view class='quotation-box' hidden='{{NavCur!=1}}'>
+  <view bindtap='moreOffer' class='cu-bar  bg-white solid-bottom margin-top' data-index='{{index}}'>
+    <view class='action border-title'>
+      <text class=" text-bold text-blue">近期试算</text>
+      <text class="bg-gradual-blue" style="width:3rem"></text>
+    </view>
+  </view>
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+    <view class="cu-item" wx:for="{{msgJson}}" wx:key bindtap='PASSonDetail' data-index='{{index}}'>
+      <view class='content padding-tb-sm'>
+        <view>
+          <view class="cu-tag radius bg-blue" wx:if="{{item.type==1}}">本店个人</view>
+          <view class="cu-tag radius bg-blue" wx:if="{{item.type==2}}">它店个人</view>
+          <view class="cu-tag radius bg-blue" wx:if="{{item.type==3}}">本店销售</view>
+          <view class="cu-tag radius bg-blue" wx:if="{{item.type==4}}">本店其他试算</view>
+          <view class="cu-tag radius bg-blue" wx:if="{{item.type==5}}">他店其他试算</view>
+          {{item.name}}
+        </view>
+        <view class='text-gray text-sm'>试算总价：{{item.price}} </view>
+        <view class='text-gray text-sm'> 贷款形式：{{item.mode}}</view>
+        <view class='text-gray text-sm'> 首付比例：{{item.precent}}</view>
+        <view class='text-gray text-sm'> 首付金额：{{item.firstPrice}}</view>
+        <view class='text-gray text-sm'> 地址：{{item.space}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='2-box' hidden='{{NavCur!=0}}'>
+	<view class='cu-bar  bg-white solid-bottom' data-index='{{index}}'>
+		<view class='action border-title'>
+			<text class=" text-bold text-blue">用户试算报价</text>
+			<text class="bg-gradual-blue" style="width:3rem"></text>
+		</view>
+	</view>
+	<view  class="container-box">
+		<ff-canvas id="custom-dom" canvas-id="custom-dom"></ff-canvas>
+	</view>
+<view class='cu-bar  bg-white solid-bottom margin-top' data-index='{{index}}'>
+	<view class='action border-title'>
+		<text class=" text-bold text-blue">浏览详情</text>
+		<text class="bg-gradual-blue" style="width:3rem"></text>
+	</view>
+</view>
+<view class='cu-list menu '>
+	<view class="cu-item arrow" wx:key bindtap='priceChoose' data-item='{{origin}}'>
+		<view class='content'>{{dataCustomer[0].carTypeName}}{{dataCustomer[0].VehicleModelChineseName}}</view>
+		<view class=''>{{dataCustomer1.price}} </view>
+	</view>
+</view>
+</view>
+
+<view class='3-box' hidden='{{NavCur!=2}}'>
+	<scroll-view scroll-x class="bg-white nav text-center margin-top">
+		<view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabData}}" wx:key bindtap="tabSelect" data-index="{{index}}">
+			{{item.name}}
+		</view>
+	</scroll-view>
+	<view class='container' wx:if="{{TabCur==0}}">
+		<view class='sub-container'>
+			<view class="cu-timeline">
+				<view class="cu-time">历史 </view>
+				<!-- <view class="cu-item cur icon-noticefill">
+        <view class="content bg-green shadow-blur">
+          <text>22:22</text> 【陈超】此客户意向xc90
+        </view>
+      </view> -->
+
+				<view class="cu-item" wx:for='{{DescriptionModel}}' wx:key>
+					<view class="content">
+						<view class="cu-capsule radius">
+							<view class="cu-tag bg-cyan">时间</view>
+							<view class="cu-tag line-cyan">{{item.time}}</view>
+						</view>
+						<view class="margin-top">{{item.description}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='container' wx:if="{{TabCur==1}}">
+		<view class='sub-container'>
+			<view class="cu-timeline">
+				<view class="cu-time">
+					<button class="cu-btn {{LeaveTime?'bg-gray':'bg-green'}}" bindtap='AddMyCustomerLeaveTime'>{{LeaveTime?'离店':'确认'}}</button>
+				</view>
+				<view class="cu-item cur icon-noticefill">
+					<view class="content bg-green shadow-blur">
+						<text>{{LeaveTime?LeaveTime:'暂无离店信息'}}</text>
+					</view>
+				</view>
+
+				<!-- <view class="cu-item" wx:for='{{DescriptionModel}}'>
+        <view class="content">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">时间</view>
+            <view class="cu-tag line-cyan">{{item.time}}</view>
+          </view>
+          <view class="margin-top">{{item.description}}</view>
+        </view>
+      </view> -->
+			</view>
+		</view>
+	</view>
+
+	<view class='post-container' wx:if='{{!posting}}'>
+		<view bindtap='onFakePost' class='post-fake'>
+			<text> 输入短评</text>
+		</view>
+		<view class='like-container'>
+			<v-like bind:like="onLike" class="like" like="{{likeStatus}}" count="{{likeCount}}" />
+		</view>
+	</view>
+
+	<view class='posting-container' wx:if='{{posting}}'>
+		<form bindsubmit='formSubmit'>
+			<view class='post-header'>
+				<!-- <text wx:if="{{comments==true}}">仅可点击标签+1</text>
+    <text wx:else>暂无短评</text> -->
+				<view>
+					<button class='cu-btn bg-green' form-type='submit'>提交评论</button>
+
+				</view>
+
+				<text class='cancel' bindtap='onCancel'>取消</text>
+			</view>
+			<view class='comment-container'>
+				<block wx:for="{{util.limit(comments,3)}}" wx:key="content">
+					<v-tag text="{{item.content}}" tag-class="{{tool.highlight(index)}}" bindtapping="onPost">
+						<text class='num' slot="after">+{{item.nums}}</text>
+					</v-tag>
+				</block>
+			</view>
+			<input class='post' placeholder='请简练评论' name='input'></input>
+		</form>
+
+	</view>
+
+	<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+		<view class="cu-dialog">
+			<view class="cu-bar bg-white justify-end">
+				<view class="content">确认离店</view>
+				<view class="action" bindtap="hideModal">
+					<text class="icon-close text-red"></text>
+				</view>
+			</view>
+			<form bindsubmit='changeForm'>
+				<view class="cu-form-group margin-top">
+					<view class='title'>日期选择</view>
+					<picker mode="date" name='date' start="2019-01-01" end="2020-09-01" bindchange="DateChange">
+						<view class="picker">
+							{{date}}
+						</view>
+					</picker>
+				</view>
+
+				<view class="cu-form-group">
+					<view class='title'>时间选择</view>
+					<picker mode="time" name='time' value="{{time}}" start="08:01" bindchange="TimeChange">
+						<view class="picker">
+							{{time}}
+						</view>
+					</picker>
+				</view>
+				<view class="cu-bar  justify-end margin-top">
+					<view class="action">
+						<button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+						<button class="cu-btn bg-green margin-left" form-type='submit'>确定</button>
+					</view>
+				</view>
+			</form>
+		</view>
+	</view>
+</view>
+
+
+<view class="cu-timeline" hidden='{{NavCur!=3}}'>
+	<view class="cu-item cur cuIcon-noticefill" wx:for="{{History}}" data-item="{{item}}" bindtap="onhistory">
+		<view class="content bg-grey shadow-blur">
+			<text>{{item.time}}</text> 【{{item.type}}】{{item.address}}
+		</view>
+	</view>
+</view>
+
+<view class="cu-list menu" wx:if='{{NavCur==4}}'>
+	<view class="cu-item " wx:for='{{list}}' wx:key>
+		<view class="content padding-tb-sm">
+			<view class="text-black  text-bold">
+				对比时间:{{item.time}}</view>
+			<!-- <view><text class="text-gray text-sm">对比次数：{{item.count}}</text></view> -->
+			<view wx:for='{{item.json}}'>
+				<text class="text-gray text-sm">房屋名称：{{item}}</text>
+			</view>
+		</view>
+		<view class="action" bindtap="" data-item="{{item}}">
+			<view class="text-gray text-sm">对比次数：{{item.count}}</view>
+		</view>
+	</view>
+</view>

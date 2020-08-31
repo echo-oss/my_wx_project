@@ -2,6 +2,8 @@
   "usingComponents": {
     "s-scroll": "/components/scroll/index",
     "s-spu-typeOne": "/components/spu-typeOne/index",
-    "l-tag": "/miniprogram_npm/lin-ui/tag/index"
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index"
   }
 }

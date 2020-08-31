@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    isScroll:true,
     tabIndex:0,
     istap:false,
     Tab:0,
@@ -13,6 +14,7 @@ Page({
     showHouse:false,
     toView: 'banner',
     h:wx.getSystemInfoSync().windowHeight,
+    
     moreTitle:[
       {
         content:"物业类型",
@@ -72,34 +74,51 @@ Page({
     ],
     banner:[
       {
-        src:"images/banner/house.jpeg"
+        src:"/images/flower/275x206n(26).jpg"
       },
       {
-        src:"images/banner/house.jpg"
+        src:"/images/flower/275x206n(27).jpg"
       },
       {
-        src:"images/banner/house1.jpeg"
+        src:"/images/flower/275x206n(28).jpg"
+      },
+      {
+        src:"/images/flower/275x206n(29).jpg"
+      },
+      {
+        src:"/images/flower/275x206n(3).jpg"
       }
     ],
     grid:[
       {
-        src:"images/grid/house.jpeg",
+        src:"/images/grid/timg-4.jpeg",
         name:"在售楼盘"
       },
       {
-        src:"images/grid/house.jpeg",
+        src:"/images/grid/timg-5.jpeg",
         name:"即将开盘"
       },
       {
-        src:"images/grid/house.jpeg",
+        src:"/images/grid/timg-6.jpeg",
         name:"推荐楼盘"
       }
     ],
     house:[
       {
-        src:"images/grid/house.jpeg",
-        name:"融创",
-        price:16500,
+        src:"/images/flower/275x206n(3).jpg",
+        name:"花语津郡",
+        price:"29700元/平方米",
+        tag:[
+          "住宅","在售","vr看房"
+        ],
+        subTitle:[
+          "医院","商业街","高绿化率"
+        ]
+      },
+      {
+        src:"/images/hoom/372x280n(3).jpg",
+        name:"中国铁建公馆189",
+        price:"98万元/套起",
         tag:[
           "住宅","项目在建","装修"
         ],
@@ -108,71 +127,60 @@ Page({
         ]
       },
       {
-        src:"images/grid/house.jpeg",
-        name:"融创",
-        price:16500,
+        src:"/images/other/200x150m.jpg",
+        name:"中国铁建西派国印･禧阙",
+        price:"34000元/平方米",
         tag:[
-          "住宅","项目在建","装修"
+          "住宅","在售","vr看房"
         ],
         subTitle:[
-          "地区","地区","建面"
+          "市内六区","大户型","商业街"
         ]
       },
       {
-        src:"images/grid/house.jpeg",
-        name:"融创",
-        price:16500,
+        src:"/images/other/200x150m-2.jpg",
+        name:"美的旭辉翰悦府",
+        price:"20500元/平方米",
         tag:[
-          "住宅","项目在建","装修"
+          "住宅","在售",
         ],
         subTitle:[
-          "地区","地区","建面"
+           "高绿化率","大型社区","全朝南"
         ]
       },
       {
-        src:"images/grid/house.jpeg",
-        name:"融创",
-        price:16500,
+        src:"/images/other/200x150m-3.jpg",
+        name:"和融广场·悦湾河畔",
+        price:"28000元/平方米",
         tag:[
-          "住宅","项目在建","装修"
+          "商住"," 在售"
         ],
         subTitle:[
-          "地区","地区","建面"
+          "装修交付","车位充足","在建"
         ]
       },
       {
-        src:"images/grid/house.jpeg",
-        name:"融创",
-        price:16500,
+        src:"/images/other/200x150m-4.jpg",
+        name:"未来城",
+        price:"21000元/平方米",
         tag:[
-          "住宅","项目在建","装修"
+          "住宅","在售",
         ],
         subTitle:[
-          "地区","地区","建面"
+          "低容积","高绿化率","全朝南"
         ]
       },
       {
-        src:"images/grid/house.jpeg",
-        name:"融创",
-        price:16500,
+        src:"/images/other/200x150m-5.jpg",
+        name:"金融街·西青金悦府",
+        price:19000,
         tag:[
-          "住宅","项目在建","装修"
+          "住宅","在售",
         ],
         subTitle:[
-          "地区","地区","建面"
+          "高绿化率","南北通透","大户型"
         ]
       },
-      {
-        src:"images/grid/house.jpeg",
-        name:"融创",
-        price:16500,
-        tag:[
-          "住宅","项目在建","装修"
-        ],
-        subTitle:[
-          "地区","地区","建面"
-        ]
-      }
     ]
   },
   //事件处理函数
@@ -201,6 +209,9 @@ Page({
   // },
   scroll(res){
     wx.lin.setScrollTop(res.detail.scrollTop)
+    this.setData({
+      margin:368-res.detail.scrollTop,
+    })
   },
   onAre(){
     this.setData({
@@ -208,7 +219,8 @@ Page({
       showMore:false,
       showHouse:false,
       showPrice:false,
-      toView: 'tab'
+      toView: 'tab',
+      isScroll:false
     })
   },
   onMore(){
@@ -217,7 +229,8 @@ Page({
       showHouse:false,
       showAre:false,
       showPrice:false,
-      toView: 'tab'
+      toView: 'tab',
+      isScroll:false
     })
   },
   onPrice(){
@@ -226,7 +239,8 @@ Page({
       showHouse:false,
       showAre:false,
       showPrice:!this.data.showPrice,
-      toView: 'tab'
+      toView: 'tab',
+      isScroll:false
     })
   },
    onHouse(){
@@ -235,7 +249,8 @@ Page({
       showHouse:!this.data.showHouse,
       showAre:false,
       showPrice:false,
-      toView: 'tab'
+      toView: 'tab',
+      isScroll:false
     })
   },
   submit(){
@@ -254,5 +269,10 @@ Page({
       this.setData({
         tabIndex:e.currentTarget.dataset.index
       })
+  },
+  scoll(){
+    this.setData({
+      isScroll:true
+    })
   }
 })

@@ -20,4 +20,11 @@ margin-right: 10px;
   align-items: center;
   /* justify-content: space-between; */
   box-sizing: border-box;
+  position: relative;
 } 
+.price{
+  position: absolute;
+  top: 42%;
+  left: 43%;
+  text-align: center;
+}

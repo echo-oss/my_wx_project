@@ -1,5 +1,5 @@
 <!--pages/navigator/text/index.wxml--> 
-  <scroll-view scroll-y style="height:{{h}}px; " scroll-into-view="{{toView}}" bindscroll="scroll">
+  <scroll-view scroll-y="{{isScroll}}" style="height:{{h}}px; " scroll-into-view="{{toView}}" bindscroll="scroll">
 	<view class="container">
 		<swiper id='banner' class="swiper" indicator-dots indicator-color indicator-active-color="#F0F8FF" autoplay interval="5000" circular>
 			<block wx:for="{{banner}}" wx:key="index">
@@ -19,7 +19,7 @@
 
 			<view class='cu-item ' style="height: 150rpx;" bindtap='onNaviCard1'>
 				<view class='text-shadow'>
-					<image class="img" src="images/banner/house1.jpeg"></image>
+					<image class="img" src="/images/grid/timg-7.jpeg"></image>
 				</view>
 				<text>房贷计算</text>
 			</view>
@@ -42,8 +42,8 @@
 	</view>
 </scroll-view>
 <!-- 区域 -->
-<l-popup show="{{showAre}}" content-align="top">
-		<view class="popup">
+<l-popup show="{{showAre}}" bind:lintap="scoll" content-align="top">
+		<view class="popup" style="margin-top:{{margin}}px">
 	<view class="main">
       <l-segment 
                 height="600"
@@ -71,8 +71,8 @@
 </l-popup>
 
 <!-- 价格 -->
-<l-popup show="{{showPrice}}" content-align="top">
-		<view class="popup">
+<l-popup show="{{showPrice}}"   bind:lintap="scoll" content-align="top">
+		<view class="popup"  style="margin-top:{{margin}}px">
 	<view class="main">
       <l-segment 
                 height="600"
@@ -101,8 +101,8 @@
 </l-popup>
 
 <!-- 户型 -->
-<l-popup show="{{showHouse}}" content-align="top">
-		<view class="popup">
+<l-popup show="{{showHouse}}"  bind:lintap="scoll"  content-align="top">
+		<view class="popup"  style="margin-top:{{margin}}px">
 	<view class="main">
       <l-segment 
                 height="600"
@@ -131,8 +131,8 @@
 </l-popup>
 
 <!-- 更多 -->
-<l-popup show="{{showMore}}" content-align="top">
-	<view class="popup">
+<l-popup show="{{showMore}}"   bind:lintap="scoll" content-align="top">
+	<view class="popup"  style="margin-top:{{margin}}px">
 	<view class="main">
       <l-segment 
                 height="600"

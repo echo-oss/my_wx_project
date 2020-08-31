@@ -84,5 +84,7 @@ margin: 10px;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    
+}
+.title{
+  padding: 25rpx;
 }

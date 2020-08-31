@@ -1,5 +1,8 @@
 <!--pages/subpackages/main/calculatorEnd/index.wxml-->
  <view class="container-box" >
-    <ff-canvas id="custom-dom" canvas-id="custom-dom"></ff-canvas>
+    <ff-canvas id="custom-dom" canvas-id="custom-dom">
+    </ff-canvas>
+    <view class="price text-red text-xl"><view>月供</view>
+    <view>{{price}}</view></view>
   </view>
 

@@ -1,4 +1,7 @@
 <!--pages/subpackages/cars/pages/auto-contrast/index.wxml-->
+<view class="bg-green title text-center">
+   <text class="cuIcon-camerafill"></text> 对比结果
+</view>
 <view class="wrapper" >
   <block wx:for='{{1}}' wx:key wx:for-item='config'>
     <view class="main">

@@ -101,10 +101,44 @@
 					"scene": null
 				},
 				{
+					"id": 5,
+					"name": "pages/subpackages/main/calculatorEnd/index",
+					"pathName": "pages/subpackages/main/calculatorEnd/index",
+					"query": "",
+					"scene": null
+				},
+				{
 					"id": -1,
 					"name": "pages/subpackages/main/calculatorEnd/index",
 					"pathName": "pages/subpackages/main/calculatorEnd/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/subpackages/detail/compareEnd/index",
+					"pathName": "pages/subpackages/detail/compareEnd/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/subpackages/my/myDetail/index",
+					"pathName": "pages/subpackages/my/myDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/subpackages/my/lookDetail/index",
+					"pathName": "pages/subpackages/my/lookDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/subpackages/main/houseList/index",
+					"pathName": "pages/subpackages/main/houseList/index",
 					"scene": null
 				}
 			]

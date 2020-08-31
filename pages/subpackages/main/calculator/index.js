@@ -1,11 +1,18 @@
 // pages/subpackages/main//calculator/index.js
-Page({
+import {Calculator} from "./calculator";
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-
+    modalName:null,
+    count:0,
+    list1:[
+      "10%","20%","30%","40%"
+    ],
+    index1:0,
+    listContent1:"暂无"
   },
 
   /**
@@ -64,8 +71,46 @@ Page({
 
   },
   formSubmit(e) {
+    let end = Calculator.getCommercialLoan(this.data.count,this.data.index1)
+    console.log(end)
     wx.navigateTo({
-      url: `/pages/subpackages/main/calculatorEnd/index`,
+      url: `/pages/subpackages/main/calculatorEnd/index?count=${end}`,
+    })
+    
+  },
+  onList1(e){
+    this.setData({
+      modalName: e.currentTarget.dataset.target
     })
   },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
+  submit(e){
+    this.setData({
+      listContent1:this.data.list1[this.data.index1],
+      modalName: null
+    })
+  },
+  choose(e){
+    console.log(e)
+    this.setData({
+     index1:e.currentTarget.dataset.index
+    })
+  },
+  calculator(e){
+    this.setData({
+      count:e.detail.value,
+    })
+    let count = this.data.count;
+    console.log(count)
+    let index = this.data.index1;
+    let end = Math.ceil(Calculator.getCommercialLoan(count,index))
+
+    this.setData({
+      end,
+    })
+  }
 })

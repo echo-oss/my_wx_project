@@ -1,0 +1,65 @@
+ 
+.container{
+ width: 100%;
+ height: 100%;
+}
+
+
+/* 列表组件 */
+
+.c-list.menu {
+  display: block;
+  overflow: hidden;
+}
+
+.c-list.menu>.c-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100rpx;
+  background: #fff;
+  padding: 30rpx;
+}
+.c-list.menu>.c-item::after {
+  content: " ";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #ddd;
+}
+.c-list.menu>.c-item.arrow {
+  padding-right: 90rpx;
+}
+.c-list.menu>.c-item.arrow::before {
+  font-family: cuIcon;
+  display: block;
+  content: "\e6a3";
+  position: absolute;
+  font-size: 34rpx;
+  color: #aaa;
+  line-height: 30rpx;
+  height: 34rpx;
+  width: 30rpx;
+  text-align: center;
+  top: 34rpx;
+  /* bottom: 30rpx; */
+  right: 30rpx;
+  /* margin: auto; */
+}
+.c-list.menu>.c-item .content{
+  line-height: 1.6em;
+  flex: 5;
+  font-size: 30rpx;
+}
+.c-list.menu>.c-item .action{
+  line-height: 1.6em;
+  flex: 1;
+  font-size: 30rpx;
+}

@@ -68,4 +68,12 @@
   font-weight: 400; 
   margin-bottom: 6rpx;
   color: rgba(128, 128, 128, 0.575);
+  color: red;
+}
+.tag-container{
+  display: flex;
+  flex-direction: row;
+}
+.l-tag{
+  margin-right:6rpx ;
 }

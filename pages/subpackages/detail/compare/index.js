@@ -8,9 +8,20 @@ Page({
     h:wx.getSystemInfoSync().windowHeight-50,
     house:[
       {
-        src:"images/grid/house.jpeg",
-        name:"融创",
-        price:16500,
+        src:"/images/flower/275x206n(3).jpg",
+        name:"花语津郡",
+        price:"29700元/平方米",
+        tag:[
+          "住宅","在售","vr看房"
+        ],
+        subTitle:[
+          "医院","商业街","高绿化率"
+        ]
+      },
+      {
+        src:"/images/hoom/372x280n(3).jpg",
+        name:"中国铁建公馆189",
+        price:"98万元/套起",
         tag:[
           "住宅","项目在建","装修"
         ],
@@ -19,27 +30,16 @@ Page({
         ]
       },
       {
-        src:"images/grid/house.jpeg",
-        name:"融创1",
-        price:16500,
+        src:"/images/other/200x150m.jpg",
+        name:"中国铁建西派国印･禧阙",
+        price:"34000元/平方米",
         tag:[
-          "住宅","项目在建","装修"
+          "住宅","在售","vr看房"
         ],
         subTitle:[
-          "地区","地区","建面"
+          "市内六区","大户型","商业街"
         ]
       },
-      {
-        src:"images/grid/house.jpeg",
-        name:"融创2",
-        price:16500,
-        tag:[
-          "住宅","项目在建","装修"
-        ],
-        subTitle:[
-          "地区","地区","建面"
-        ]
-      }
     ],
   },
 

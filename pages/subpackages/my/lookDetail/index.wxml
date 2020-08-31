@@ -1,0 +1,58 @@
+<scroll-view scroll-x class="bg-green nav text-center">
+  <view class="cu-item {{0==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="0">
+    <text class="cuIcon-camerafill"></text> 本次轨迹
+  </view>
+  <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="1">
+    <text class="cuIcon-upstagefill"></text> 历史浏览轨迹
+  </view>
+  <view class="cu-item {{2==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="2">
+    <text class="cuIcon-upstagefill"></text> 历史浏览统计
+  </view>
+</scroll-view>
+
+<view class='container' hidden='{{0!=TabCur}}'>
+  <view class='container-item' wx:for="{{model}}">
+    <view class='name'>{{item.type}}</view>
+    <text class='detail'>{{item.date}}</text>
+    <view class='time'>{{item.time}}</view>
+  </view>
+
+</view>
+
+<view class='container' hidden='{{1!=TabCur}}'>
+  <view wx:for="{{msgJson}}" >
+    <view >  浏览位置： {{item.name}}</view>
+    <view wx:for="{{item.content}}">
+      <view class="cu-bar bg-white">
+        <view class="action title-style-3">
+          <text class="text-xl text-bold">浏览轨迹</text>
+          <!-- <text class="text-Abc text-gray self-end margin-left-sm">第{{index+1}}次</text> -->
+        </view>
+      </view>
+      <view class='container-item solid-bottom' >
+        <view class='name'>{{item.type}}</view>
+        <text class='detail'>{{item.date}}</text>
+        <view class='time'>{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+
+
+</view>
+
+
+<view class='container' hidden='{{2!=TabCur}}'>
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">浏览统计</text>
+    </view>
+  </view>
+  <view wx:for="{{msgJson2}}">
+
+    <view class='container-item solid-bottom' wx:for="{{item}}">
+      <view class='name'>{{item.type}}</view>
+      <text class='detail'>{{item.date}}</text>
+      <view class='time'>{{item.count}}</view>
+    </view>
+  </view>
+</view>

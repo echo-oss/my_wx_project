@@ -6,12 +6,14 @@
 				<view class="spu-container" >
 					<!--点击态设置 3ms-->
 					<view  bindtap="onItemTap">
-						<image class="spu-img" src="{{item.src}}"></image>
+						<image class="spu-img" src="{{item.src}}" bindtap="onPerview" data-src="{{item.src}}"></image>
 						<view style="font-size:24rpx;font-weight: 400; margin-bottom:6rpx;">{{item.title}}</view>
-						<view style="font-size:24rpx;font-weight: 400; margin-bottom: 6rpx;color: rgba(128, 128, 128, 0.575);">{{item.subtitle}}</view>
+						<view style="font-size:24rpx;font-weight: 400; margin-bottom: 6rpx;{{item.subtitle=='暂无价格'?'color: rgba(128, 128, 128,0.575);':'color:red;'}}">{{item.subtitle}}</view>
+						<view class="tag-container">
 						<l-tag type="reading" bg-color="#DCEBE6" font-color="#157658" size="super-mini" l-class="l-tag" wx:for="{{item.tag}}" wx:key="index">
 							{{item}}
 						</l-tag>
+						</view>	
 					</view>
 				</view>
 			</block>

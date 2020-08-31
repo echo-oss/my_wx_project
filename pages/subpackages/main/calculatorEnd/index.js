@@ -29,6 +29,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      price:options.count
+    })
     this._loadChart2(this.data.end)
   },
 
@@ -89,21 +92,20 @@ Page({
         el: canvas,
         width,
         height,
-        animate: false
       });
 
       chart.source(data);
       chart.coord('polar', {
         transposed: true,
-        radius: 0.9,
-        innerRadius: 0.5
+        radius: 0.85,
+        innerRadius: 0.7
       });
       chart.legend(false);
       chart.axis(false);
       chart.tooltip(false);
-
       // 添加饼图文本
       chart.pieLabel({
+        content: '15000元',
         sidePadding: 40,
         label1: function label1(data, color) {
           let ratio = data.ratio ? data.ratio : 0
@@ -116,6 +118,7 @@ Page({
           let text = data.name;
           // app.util.getLength(data.name) < 15 ? data.name : app.util.cutstr(data.name, 14)
           return {
+           
             text: text,
             fill: '#999'
           };
