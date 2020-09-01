@@ -6,6 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    rateList:[
+      "最新基准利率（4.90%）","9.5折（4.66%）","9.5折（4.66%）","9折（4.41%）","8.5折（4.16%）"
+    ],
+    rateList1:[
+      "最新基准利率（4.90%）","9.5折（4.66%）","9.5折（4.66%）","9折（4.41%）","8.5折（4.16%）"
+    ],
+    number:0,
+    comNumber:0,
+    listLeft:["0"],
+    listRight:["年限30年","年限29年","年限28年","年限27年","年限26年"],
+    comLeft:["0"],
+    comRight:["年限30年","年限29年","年限28年","年限27年","年限26年"],
     modalName:null,
     end:0,
     count:0,
@@ -20,7 +32,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      content:this.data.listRight[0],
+      comContent:this.data.comRight[0]
+    })
   },
 
   /**
@@ -34,7 +49,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
 
   /**
@@ -72,9 +87,14 @@ Page({
 
   },
   formSubmit(e) {
-    let end = this.data.end*10000
+    let end1 = (this.data.count-this.data.end)*10000
+    let index = this.data.listRight.indexOf(this.data.content)
+    console.log(index)
+    end1=Calculator.getCommercial(end1,index)
+    end1= Math.ceil(end1)
+    console.log(end1)
     wx.navigateTo({
-      url: `/pages/subpackages/main/calculatorEnd/index?count=${end}`,
+      url: `/pages/subpackages/main/calculatorEnd/index?count=${end1}`,
     })
     
   },
@@ -105,11 +125,97 @@ Page({
       count:e.detail.value,
     })
     let count = this.data.count;
-    console.log(count)
     let index = this.data.index1;
     let end = Math.ceil(Calculator.getCommercialLoan(count,index))
     this.setData({
-      end,
+      end
     })
-  }
+    let end1 = this.data.end; 
+    let listLeft = []
+    let comLeft = []
+    for(let i = 0;i<5;i++){
+      listLeft.push(count-end1-i)
+      comLeft.push(i)
+    }
+    this.setData({
+      listLeft,
+      comLeft,
+      number:listLeft[0],
+      comNumber:comLeft[0]
+    })
+  },
+  scroll(e){
+    let top = e.detail.scrollTop
+    let number = 0 
+    for(let i in this.data.listLeft){
+      if(top>=i*30&&top<(i+1)*30){
+        number=this.data.listLeft[i]
+      }
+    }
+    this.setData({
+      number,
+    })
+  },
+  scroll1(e){
+    let top = e.detail.scrollTop
+    let content = this.data.listRight[0]
+    for(let i in this.data.listRight){
+      if(top>=i*28&&top<(i+1)*30){
+        content=this.data.listRight[i]
+      }
+    }
+    this.setData({
+      content,
+    })
+  },
+  scroll2(e){
+    let top = e.detail.scrollTop
+    let rateContent = this.data.rateList[0]
+    for(let i in this.data.rateList){
+      if(top>=i*28&&top<(i+1)*30){
+        rateContent=this.data.rateList[i]
+      }
+    }
+    this.setData({
+      rateContent,
+    })
+  },
+
+  scroll3(e){
+    let top = e.detail.scrollTop
+    let comNumber = 0
+    for(let i in this.data.comLeft){
+      if(top>=i*30&&top<(i+1)*30){
+        comNumber=this.data.comLeft[i]
+      }
+    }
+    this.setData({
+      comNumber,
+    })
+  },
+  scroll4(e){
+    let top = e.detail.scrollTop
+    let comContent = this.data.comRight[0]
+    for(let i in this.data.comRight){
+      if(top>=i*28&&top<(i+1)*30){
+        comContent=this.data.comRight[i]
+      }
+    }
+    this.setData({
+      comContent,
+    })
+  },
+
+  scroll5(e){
+    let top = e.detail.scrollTop
+    let rateContent1 = this.data.rateList1[0]
+    for(let i in this.data.rateList1){
+      if(top>=i*28&&top<(i+1)*30){
+        rateContent1=this.data.rateList1[i]
+      }
+    }
+    this.setData({
+      rateContent1,
+    })
+  },
 })

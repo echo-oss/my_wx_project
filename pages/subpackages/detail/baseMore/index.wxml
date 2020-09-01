@@ -22,12 +22,12 @@
 					<view>2021年10月31日</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">环线配置:</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx;overflow:auto">环线配置:</view>
 					<view>中至外环</view>
 				</view>
 				<view class="tip">
-					<view style="width:22%;color: rgb(167, 165, 165);margin-right:20rpx">楼盘地址:</view>
-					<view>[河北-金钟河大街]群芳路与靖江北路交口东北侧</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx ">楼盘地址:</view>
+					<view style="width:78%;">[河北-金钟河大街]群芳路与靖江北路交口东北侧</view>
 				</view>
 			</view>
 		</view>
@@ -42,7 +42,7 @@
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">参考单价:</view>
-					<view>住宅最低29700元/平方米起(均价32700元/平方米)</view>
+					<view style="width:78%;">住宅最低29700元/平方米起(均价32700元/平方米)</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165); margin-right:20rpx">楼盘总价:</view>
@@ -58,7 +58,7 @@
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">售楼地址:</view>
-					<view>金钟河大街与红波路交口花语津郡营销中心</view>
+					<view style="width:78%;">金钟河大街与红波路交口花语津郡营销中心</view>
 				</view>
 			</view>
 		</view>
@@ -80,39 +80,35 @@
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">开 发 商 :</view>
-					<view>中铁房地产兴泰(天津)置业有限公司</view>
+					<view style="width:78%;">中铁房地产兴泰(天津)置业有限公司</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">投 资 商 :</view>
-					<view>中铁房地产集团商业地产开发管理有限公司</view>
+					<view style="width:78%;">中铁房地产集团商业地产开发管理有限公司</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">容 积 率 :</view>
-					<view>住 宅 :2.34</view>
+					<view>住 宅 : 2.34</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">绿 化 率 :</view>
-					<view>达35%</view>
+					<view>35%</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">规划用户
-						:</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">规划用户:</view>
 					<view>800户</view>
 				</view>
 				<view class="tip">
-					<view style="width:48%;color: rgb(167, 165, 165);margin-right:20rpx">楼层状况
-						:</view>
-					<view>一共规划为8栋楼，3#-8#为高层，均为31层到 顶，两梯四户，南北朝向;1#-2#为洋房，7层到
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">楼层状况:</view>
+					<view style="width:78%;">一共规划为8栋楼，3#-8#为高层，均为31层到 顶，两梯四户，南北朝向;1#-2#为洋房，7层到
 顶。</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">占地面积
-						:</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">占地面积:</view>
 					<view>37000平方米</view>
 				</view>
 				<view class="tip">
-					<view style="color: rgb(167, 165, 165);margin-right:20rpx">建筑面积
-						:</view>
+					<view style="color: rgb(167, 165, 165);margin-right:20rpx">建筑面积:</view>
 					<view>121600平方米</view>
 				</view>
 				<view class="tip">
@@ -132,7 +128,7 @@
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">物 业 费 :</view>
-					<view>住 宅 :3.1元/平米/月</view>
+					<view>住 宅 : 3.1元/平米/月</view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165); margin-right:20rpx">物业公司:</view>

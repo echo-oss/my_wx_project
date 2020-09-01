@@ -1,4 +1,3 @@
-
 <view class="container">
 	<form catchsubmit="formSubmit" class="from-container">
 		<view class="from-container">
@@ -18,19 +17,20 @@
 		<view class="mid">贷款总额{{count-end}}万</view>
 		<view class="input-container">
 			<view>商业贷款</view>
-			<view class="input1" bindtap="onList1" >{{count-end}}万 年限30年</view>
+			<view class="input1" bindtap="onList1" data-target="ScrollModal" >{{number}}万 {{content}}</view>
 		</view>
 		<view class="input-container">
 			<view>商贷利率</view>
-			<view class="input1" bindtap="onList1" >最新基准利率（4.90%）</view>
+			<view class="input1" bindtap="onList1" data-target="ScrollModal1">
+			{{rateContent===undefined?rateList[0]:rateContent}}</view>
 		</view>
 		<view class="input-container">
 			<view>公积金贷款</view>
-				<view class="input1" bindtap="onList1" >{{count-end}}万 年限30年</view>
+				<view class="input1" bindtap="onList1" data-target="ScrollModal2" >{{comNumber}}万 {{comContent}}</view>
 		</view>
 		<view class="input-container">
 			<view>公积金利率</view>
-				<view class="input1" bindtap="onList1" >最新基准利率（3.25%）</view>
+				<view class="input1" bindtap="onList1" data-target="ScrollModal3" >{{rateContent1===undefined?rateList1[0]:rateContent1}}</view>
 		</view>
 		<view class="mid">首套 ：最高贷款比例70%。最高贷款额60万;二套：最高贷款比例40%。最高贷款额40万</view>
 		<view class="btn-area">
@@ -55,23 +55,53 @@
 		</view>
 </view>
 
-<!-- <view class="cu-modal bottom-modal {{modalName=='RadioModal'?'show':''}}" >
-		<view class="cu-dialog">
-			<view class="cu-bar bg-white">
-				<view class="action text-green" bindtap="submit">确定</view>
-				<view class="action text-blue" bindtap="hideModal">取消</view>
-			</view>
-			<view class="cu-list menu text-left margin-left-sm margin-right-sm">
-				<view class="cu-item" wx:for="{{list1}}" wx:key="index" data-index="{{index}}" bindtap="choose">
-					<label class="flex justify-between align-center flex-sub">
-						<view class="flex-sub {{index==index1?'text-red':''}}">{{item}}</view>
-					</label>
-				</view>
-			</view>
+<l-popup show="{{modalName=='ScrollModal'?'true':''}}"> 
+  <view class="bg-white ">
+	  <view class="scroll-container">
+			<scroll-view scroll-y class="scroll" enable-flex  bindscroll="scroll">
+			<view class="text-xxl " style="font-family: Microsoft YaHei;" wx:for="{{listLeft}}" id="{{item}}" >{{item}}</view></scroll-view>
+		万
+		<scroll-view scroll-y class="scroll" enable-flex  bindscroll="scroll1">
+			<view class="text-xxl " wx:for="{{listRight}}">{{item}}</view></scroll-view>
 		</view>
-</view>
+		<view></view>
+	</view>
+</l-popup>
 
-<view class="cu-modal bottom-modal {{modalName=='RadioModal'?'show':''}}" >
+<l-popup show="{{modalName=='ScrollModal1'?'true':''}}"> 
+  <view class="bg-white ">
+	  <view class="scroll-container">
+		<scroll-view scroll-y class="scroll" enable-flex  bindscroll="scroll2">
+			<view class="text-xxl " wx:for="{{rateList}}">{{item}}</view></scroll-view>
+		</view>
+		<view></view>
+	</view>
+</l-popup>
+
+<l-popup show="{{modalName=='ScrollModal2'?'true':''}}"> 
+  <view class="bg-white ">
+	  <view class="scroll-container">
+			<scroll-view scroll-y class="scroll" enable-flex  bindscroll="scroll3">
+			<view class="text-xxl " style="font-family: Microsoft YaHei;" wx:for="{{comLeft}}" id="{{item}}" >{{item}}</view></scroll-view>
+		万
+		<scroll-view scroll-y class="scroll" enable-flex  bindscroll="scroll4">
+			<view class="text-xxl " wx:for="{{comRight}}">{{item}}</view></scroll-view>
+		</view>
+		<view></view>
+	</view>
+</l-popup>
+
+<l-popup show="{{modalName=='ScrollModal3'?'true':''}}"> 
+  <view class="bg-white ">
+	  <view class="scroll-container">
+		<scroll-view scroll-y class="scroll" enable-flex  bindscroll="scroll5">
+			<view class="text-xxl " wx:for="{{rateList1}}">{{item}}</view></scroll-view>
+		</view>
+		<view></view>
+	</view>
+</l-popup>
+
+<!--<view class="cu-modal bottom-modal {{modalName=='RadioModal'?'show':''}}" >
 		<view class="cu-dialog">
 			<view class="cu-bar bg-white">
 				<view class="action text-green" bindtap="submit">确定</view>
