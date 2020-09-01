@@ -7,6 +7,7 @@ Page({
    */
   data: {
     modalName:null,
+    end:0,
     count:0,
     list1:[
       "10%","20%","30%","40%"
@@ -71,8 +72,7 @@ Page({
 
   },
   formSubmit(e) {
-    let end = Calculator.getCommercialLoan(this.data.count,this.data.index1)
-    console.log(end)
+    let end = this.data.end*10000
     wx.navigateTo({
       url: `/pages/subpackages/main/calculatorEnd/index?count=${end}`,
     })
@@ -108,7 +108,6 @@ Page({
     console.log(count)
     let index = this.data.index1;
     let end = Math.ceil(Calculator.getCommercialLoan(count,index))
-
     this.setData({
       end,
     })
