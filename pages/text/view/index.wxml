@@ -1,0 +1,19 @@
+<swiper autoplay interval="5000" display-multiple-items="2" circular vertical class="p-swiper">
+	<swiper-item wx:for="{{list}}">
+		<view class="sw-container">
+			<view class="left-container">
+				<view class="left">
+					<l-avatar l-class="avatar-bg" icon-style="color:#5bf320;size:50" size="70" icon="user" />
+					<l-avatar l-class="avatar-bg" icon-style="color:#5bf320;size:50" size="70" icon="user" />
+					<view>名字或订单号</view>
+				</view>
+				<view>
+					<view class="right">几人拼团</view>
+				</view>
+			</view>
+			<view class="right-container">
+				立即拼团
+			</view>
+		</view>
+	</swiper-item>
+</swiper>

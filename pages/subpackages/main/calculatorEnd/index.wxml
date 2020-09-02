@@ -3,6 +3,7 @@
     <ff-canvas id="custom-dom" canvas-id="custom-dom">
     </ff-canvas>
     <view class="price text-red text-xl"><view>月供</view>
-    <view>{{price}}</view></view>
+    <view>{{price}}</view>
+    </view>
   </view>
 

@@ -1,0 +1,5 @@
+<!--pages/text/move/index.wxml-->
+<view class="container" bindtap="onMove">
+ <view id="item1" class="item">天津</view>
+ <view id="item2" class="item">北京</view>
+</view>

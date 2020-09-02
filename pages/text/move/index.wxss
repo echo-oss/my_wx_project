@@ -1,0 +1,11 @@
+/* pages/text/move/index.wxss */
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.item{
+  font-size: 36rpx;
+  background-color: gold;
+  padding: 30rpx;
+}

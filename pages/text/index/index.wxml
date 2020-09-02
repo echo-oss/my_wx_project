@@ -1,0 +1,10 @@
+<l-combined-tabs >
+<block wx:for="{{list}}" wx:for-item="i" wx:for-index="idx">
+<block wx:for="{{i.sublist}}" wx:for-item="j" wx:for-index="idy">
+ <l-tabpanel tab="{{i.name}}" key="{{idx}}" sub-tab="{{j}}" sub-key="{{idy}}" slot="{{idx}}">
+       {{j}}111
+    </l-tabpanel>
+</block>
+
+</block>
+</l-combined-tabs>

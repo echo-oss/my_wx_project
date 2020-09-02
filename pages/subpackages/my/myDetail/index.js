@@ -31,23 +31,13 @@ Page({
       price: "29700元/㎡起"
     },
     dataCustomer: [{
-        Guid: "1598574218000",
-        VehicleModelChineseName: " ",
-        VehicleModelYear: "2018款",
-        carTypeCode: "ZB00",
-        carTypeId: 647,
         carTypeName: "中国铁建花语津郡",
-        price: 808000,
+        price: 29700,
         time: "2020/8/28 8:23:52"
       },
       {
-        Guid: "1598522124000",
-        VehicleModelChineseName: " 730Li 领先型 M运动套装",
-        VehicleModelYear: "2018款",
-        carTypeCode: "ZB00",
-        carTypeId: 647,
-        carTypeName: "宝马7系",
-        price: 600000,
+        carTypeName: "中国铁建公馆189",
+        price: 6000,
         time: "2020/8/27 17:55:28"
       }
     ],
@@ -558,41 +548,58 @@ Page({
         height,
         animate: false
       });
+      // chart.source(data,{
+      //   time: {
+      //     type: 'timeCat',
+      //     range: [0, 1],
+      //     tickCount: 5,
+      //     mask: 'MM-DD'
+      //   },
+      //   price: {
+      //     tickCount: 5,
+      //     min: 0
+      //   },
+      // });
 
       chart.source(data, {
-        time: {
-          type: 'timeCat',
-          range: [0, 1],
-          tickCount: 5,
-          mask: 'MM-DD'
-        },
         price: {
-          tickCount: 5,
-          min: 0
-        },
+          tickCount: 5
+        }
       });
-
-
       chart.tooltip({
-        showCrosshairs: true,
         showItemMarker: false,
-        onShow(ev) {
-          console.log(ev)
+        onShow: function onShow(ev) {
           that.setData({
             origin: ev.items[0].origin
           })
-          var items = ev.items;
+          const items = ev.items;
           items[0].name = null;
+          items[0].name = items[0].title;
           items[0].value = '¥ ' + items[0].value;
         }
-      })
-      chart.line().position('time*price');
-      chart.point().position('time*price').style({
-        stroke: '#fff',
-        lineWidth: 1
       });
-
+      chart.interval().position('carTypeName*price');
       chart.render();
+      // chart.tooltip({
+      //   showCrosshairs: true,
+      //   showItemMarker: false,
+      //   onShow(ev) {
+      //     console.log(ev)
+      //     that.setData({
+      //       origin: ev.items[0].origin
+      //     })
+      //     var items = ev.items;
+      //     items[0].name = null;
+      //     items[0].value = '¥ ' + items[0].value;
+      //   }
+      // })
+      // chart.line().position('time*price');
+      // chart.point().position('time*price').style({
+      //   stroke: '#fff',
+      //   lineWidth: 1
+      // });
+
+      // chart.render();
 
     })
   },

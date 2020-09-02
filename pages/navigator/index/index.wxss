@@ -156,6 +156,7 @@
 
 }
 .popup{
+  margin-top:97rpx!important;
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -27,7 +27,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -73,13 +73,6 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/subpackages/main/calculator/index",
-					"pathName": "pages/subpackages/main/calculator/index",
-					"query": "",
-					"scene": null
-				},
-				{
 					"id": 2,
 					"name": "基础查看更多",
 					"pathName": "pages/subpackages/detail/baseMore/index",
@@ -101,28 +94,7 @@
 					"scene": null
 				},
 				{
-					"id": 5,
-					"name": "pages/subpackages/main/calculatorEnd/index",
-					"pathName": "pages/subpackages/main/calculatorEnd/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/subpackages/main/calculatorEnd/index",
-					"pathName": "pages/subpackages/main/calculatorEnd/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/subpackages/detail/compareEnd/index",
-					"pathName": "pages/subpackages/detail/compareEnd/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
+					"id": 4,
 					"name": "pages/subpackages/my/myDetail/index",
 					"pathName": "pages/subpackages/my/myDetail/index",
 					"query": "",
@@ -130,15 +102,30 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/subpackages/my/lookDetail/index",
-					"pathName": "pages/subpackages/my/lookDetail/index",
+					"name": "pages/text/view/index",
+					"pathName": "pages/text/view/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/subpackages/main/houseList/index",
-					"pathName": "pages/subpackages/main/houseList/index",
+					"name": "pages/text/move/index",
+					"pathName": "pages/text/move/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/text/index/index",
+					"pathName": "pages/text/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/text/love/index",
+					"pathName": "pages/text/love/index",
+					"query": "",
 					"scene": null
 				}
 			]

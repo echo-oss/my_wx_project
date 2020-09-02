@@ -141,7 +141,7 @@
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">车 位 比 :</view>
-					<view>比值：1:1.1 </view>
+					<view>1:1.1 </view>
 				</view>
 				<view class="tip">
 					<view style="color: rgb(167, 165, 165);margin-right:20rpx">地下车位数:</view>

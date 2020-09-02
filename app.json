@@ -2,7 +2,10 @@
   "pages": [
     "pages/navigator/index/index",
     "pages/navigator/center/index",
-    "pages/navigator/my/index"
+    "pages/navigator/my/index",
+    "pages/text/view/index",
+    "pages/text/move/index",
+    "pages/text/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

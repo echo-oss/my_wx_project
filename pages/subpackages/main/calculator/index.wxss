@@ -42,6 +42,7 @@
   text-align: center;
 }
 .scroll{
+  margin: 0 20rpx 0 20rpx;
   overflow: auto;
   width: auto;
   height: 60rpx;

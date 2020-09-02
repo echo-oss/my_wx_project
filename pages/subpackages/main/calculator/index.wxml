@@ -57,10 +57,10 @@
 
 <l-popup show="{{modalName=='ScrollModal'?'true':''}}"> 
   <view class="bg-white ">
-	  <view class="scroll-container">
+	  <view class="scroll-container text-xl">
 			<scroll-view scroll-y class="scroll" enable-flex  bindscroll="scroll">
 			<view class="text-xxl " style="font-family: Microsoft YaHei;" wx:for="{{listLeft}}" id="{{item}}" >{{item}}</view></scroll-view>
-		万
+		     万     
 		<scroll-view scroll-y class="scroll" enable-flex  bindscroll="scroll1">
 			<view class="text-xxl " wx:for="{{listRight}}">{{item}}</view></scroll-view>
 		</view>

@@ -61,10 +61,10 @@
 		<text class="bg-gradual-blue" style="width:3rem"></text>
 	</view>
 </view>
-<view class='cu-list menu '>
+<view class='cu-list menu ' wx:if="{{origin}}">
 	<view class="cu-item arrow" wx:key bindtap='priceChoose' data-item='{{origin}}'>
-		<view class='content'>{{dataCustomer[0].carTypeName}}{{dataCustomer[0].VehicleModelChineseName}}</view>
-		<view class=''>{{dataCustomer1.price}} </view>
+		<view class='content'>{{origin.carTypeName}}</view>
+		<view class=''>{{origin.price}}元/㎡ </view>
 	</view>
 </view>
 </view>

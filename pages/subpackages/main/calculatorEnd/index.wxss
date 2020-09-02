@@ -24,6 +24,11 @@ margin-right: 10px;
 } 
 .price{
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
   top: 42%;
   left: 43%;
   text-align: center;

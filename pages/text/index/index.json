@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-combined-tabs": "/miniprogram_npm/lin-ui/combined-tabs/index",
+    "l-tabpanel": "/miniprogram_npm/lin-ui/tabpanel/index"
+  }
+}
