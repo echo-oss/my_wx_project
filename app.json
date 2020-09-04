@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/navigator/active-home/active-home",
     "pages/navigator/home/home",
     "pages/navigator/center/index",
-    "pages/navigator/active-home/active-home",
-    "pages/subpackages/activity/hotKind/location/index"
+    "pages/navigator/publicity/home"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,6 +20,12 @@
       "pages": [
         "productList/index"
       ]
+    },
+    {
+      "root": "pages/subpackages/activity",
+      "pages": [
+        "hotKind/location/index"
+      ]
     }
   ],
   "tabBar": {
@@ -27,7 +34,13 @@
     "color": "blue",
     "list": [
       {
-        "pagePath": "pages/navigator/home/home",
+        "pagePath":  "pages/navigator/publicity/home",
+        "selectedIconPath": "/images/tab/main_true.png",
+        "iconPath": "/images/tab/main.png",
+        "text": "首页"
+      },
+      {
+        "pagePath":  "pages/navigator/active-home/active-home",
         "selectedIconPath": "/images/tab/main_true.png",
         "iconPath": "/images/tab/main.png",
         "text": "首页"
