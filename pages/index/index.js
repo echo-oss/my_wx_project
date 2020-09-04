@@ -80,39 +80,6 @@ Page({
       }
     })
   },
-  onNext() {
-    if (this.data.activeIndex < 2) {
-      for (let i = 0; i < 2; i++) {
-        setTimeout(() => {
-          this.setData({
-            activeIndex: this.data.activeIndex + 1
-          });
-        }, 2000 * (i + 1))
-
-      }
-    } else {
-      wx.lin.showToast({
-        title: '已经到最后一步了哦'
-      });
-    }
-  },
-
-  onPrevious() {
-    if (this.data.activeIndex > 0) {
-      for (let i = 0; i < 2; i++) {
-        setTimeout(() => {
-          this.setData({
-            activeIndex: this.data.activeIndex - 1
-          });
-        }, 2000 * (i + 1))
-
-      }
-    } else {
-      wx.lin.showToast({
-        title: '已经到第一步了哦'
-      });
-    }
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
