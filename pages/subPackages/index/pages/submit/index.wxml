@@ -1,0 +1,10 @@
+<content-title  name="{{name}}">
+ <block wx:for="{{list}}">
+  <content-card  name="{{item.name}}" cardPadding="{{false}}">
+   <view class="center">
+      <l-button icon="to-top" plain="true" icon-color="blue" icon-size="32" bindtap="onSub">点击上传</l-button>
+   </view>
+  </content-card>
+ </block>
+</content-title>
+<l-button size="long">上传</l-button>

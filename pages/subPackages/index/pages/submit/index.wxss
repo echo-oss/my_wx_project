@@ -1,0 +1,5 @@
+/* pages/subPackages/index/pages/submit/index.wxss */
+.center{
+  display: grid;
+  place-items: center;
+}

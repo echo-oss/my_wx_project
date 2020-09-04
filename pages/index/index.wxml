@@ -1,0 +1,21 @@
+<view class="container">
+	<view class="title">主标题</view>
+	<view class="subtitle">副标题</view>
+
+	<l-steps direction="column" active-index="{{activeIndex}}">
+		<block wx:for="{{steps}}">
+			<view class="item">
+				<l-step title="{{item.title}}" custom="{{true}}">
+					<view wx:if="{{item.state===1}}" class="shou" style="background-color: green ;" slot="dot"></view>
+					<view wx:if="{{item.state===2}}" class="shou" style="background-color: red ;" slot="dot"></view>
+					<view wx:if="{{item.state===3}}" class="shou" slot="dot"></view>
+					<view wx:if="{{item.state===0}}" class="shou" style="background-color: gray ;" slot="dot"></view>
+					<view wx:if="{{item.isSub}}" bindtap="onCheck" class="describe-container" data-type="{{item.type}}" data-id="{{item.id}}" slot="describe">
+					查看
+				</view>
+				</l-step>	
+			</view>
+		</block>
+	</l-steps>
+</view>
+<l-toast />
