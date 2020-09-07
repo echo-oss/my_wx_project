@@ -1,5 +1,27 @@
 <view class="container">
-	<view class="title">主标题</view>
+<view class="title-container">
+	<view class="title">用户端流程</view>
+  <view class="explain">
+   <view>说明：</view>
+   <view class="tip-container">
+    <view class="row">
+    <view class="shou " style="background-color: green ;"></view><view>通过</view>
+    </view>
+     <view class="row">
+   <view class="shou" style="background-color: red ;"></view><view>不通过</view>
+    </view>
+     <view class="row">
+     <view class="shou"></view><view>部分通过</view>
+    </view>
+     <view class="row">
+     <view class="shou" style="background-color: gray ;"></view><view>待办</view>
+    </view>
+   </view>
+  </view>
+ 
+  </view>
+
+  
 	<view class="subtitle">副标题</view>
 
 	<l-steps direction="column" active-index="{{activeIndex}}">

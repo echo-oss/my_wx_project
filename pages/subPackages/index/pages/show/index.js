@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
     let list1=[{name:"营业执照",src:"/pages/subPackages/index/images/timg-9.jpeg"},{name:"数字承诺书",src:"/pages/subPackages/index/images/timg-9.jpeg"},{name:"征信授权书",src:"/pages/subPackages/index/images/timg-10.jpeg"}]
 
-    let list2=[{name:"网签协议",src:""},{name:"上传发票",src:""}]
+    let list2=[{name:"网签协议",src:"/pages/subPackages/index/images/timg-9.jpeg"},{name:"上传发票",src:"/pages/subPackages/index/images/timg-9.jpeg"}]
     if(options.id==="0"){
       this.setData({
       list:list1,
@@ -76,6 +76,7 @@ Page({
 
   },
   onShow(e){
+    console.log(e)
     const list=this.data.list
     const src=e.currentTarget.dataset.src
     const srclist=[]
@@ -84,7 +85,15 @@ Page({
     })
     wx.previewImage({
       current: src, // 当前显示图片的http链接
-      urls: srclist // 需要预览的图片http链接列表
+      urls: srclist, // 需要预览的图片http链接列表
+      success: function(res) {console.log(res)},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+  onBack(){
+    wx.navigateBack({
+      delta: 1,
     })
   }
   

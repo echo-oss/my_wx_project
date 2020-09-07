@@ -39,13 +39,11 @@
   flex-direction: row;
 }
 .title{
-  height: 300rpx;
     text-align: center;
     font-size: 58rpx;
     font-family: PingFangSC-Regular;
     font-weight: 400;
     color: rgb(11, 12, 12);
-    line-height: 300rpx;
     margin-top: 22rpx;
     font-style: italic
 }
@@ -61,4 +59,30 @@
 .container{
   display: flex;
   flex-direction: column;
+}
+.content-line {
+  width: 28rpx;
+  height: 6rpx;
+  background: rgba(69, 82, 107, 1);
+  border-radius: 2px;
+}
+.title-container{
+  position: relative;
+  height: 280rpx;
+}
+.explain{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  right: 20rpx;
+}
+.tip-container{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

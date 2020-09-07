@@ -5,23 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
+    select: false,
+    grade_name: '--请选择--',
+    grades: ['1班', '2班', '3班', ],
     activeIndex: 0,
     steps: [{
         type:"show",
         id:0,
         title: "纸质邮寄(营业执照、数字承诺函、征信授权书)",
-        state: 0,
+        state: 1,
         isSub: true
       },
       { type:"submit",
         title: "上传电子版材料(合同材料、结算单、发票、付款说明) 使用邮箱上传",
-        state: 0,
+        state: 2,
         isSub: false,
         id:3,
       },
       {
         title: "银行录入系统",
-        state: 0,
+        state: 3,
         isSub: false
       },
       { type:"show",

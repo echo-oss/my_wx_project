@@ -7,4 +7,4 @@
   </content-card>
  </block>
 </content-title>
-<l-button size="long">我已知晓</l-button>
+<l-button size="long" bindtap="onBack">我已知晓</l-button>
