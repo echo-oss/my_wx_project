@@ -1,0 +1,12 @@
+<content-title name="{{name}}">
+<view class="container">
+	<view class="explain">{{tip}}</view>
+  <view class="title">驳回原因</view>
+	<block wx:for="{{reason}}">
+		<view class="reason">{{item}}</view>
+	</block>
+</view>
+<view style="height:300rpx;width:100%"></view>
+<l-button  bindtap="onBack">已阅读</l-button>
+</content-title>
+

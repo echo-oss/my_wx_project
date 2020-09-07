@@ -3,6 +3,7 @@
     "l-steps": "/miniprogram_npm/lin-ui/steps/index",
     "l-step": "/miniprogram_npm/lin-ui/step/index",
     "l-button": "/miniprogram_npm/lin-ui/button/index",
-    "l-toast": "/miniprogram_npm/lin-ui/toast/index"
+    "l-toast": "/miniprogram_npm/lin-ui/toast/index",
+    "dropdownmenu": "/components/dropdownmenu/dropdownmenu"
   }
 }

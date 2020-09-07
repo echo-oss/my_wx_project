@@ -1,10 +1,12 @@
 <content-title  name="{{name}}">
+<view class="explain">{{tip}}</view>
  <block wx:for="{{list}}">
   <content-card  name="{{item.name}}" cardPadding="{{false}}">
+  <view class="discription">{{item.discription}}</view>
    <view class="center">
    <image src="{{item.src}}" data-src="{{item.src}}" mode="aspectFit" bindtap="onShow"></image>
    </view>
   </content-card>
  </block>
 </content-title>
-<l-button size="long" bindtap="onBack">我已知晓</l-button>
+<l-button size="long" bindtap="onBack">{{style}}</l-button>

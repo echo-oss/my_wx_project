@@ -7,7 +7,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "招商1+N供应链项目",
     "navigationBarTextStyle":"black"
   },
   "subPackages": [
@@ -15,7 +15,8 @@
       "root": "pages/subPackages/index",
       "pages": [
         "pages/show/index",
-        "pages/submit/index"
+        "pages/submit/index",
+        "pages/reject/index"
       ]
     }
   ],

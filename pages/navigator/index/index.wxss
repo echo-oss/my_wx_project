@@ -1,8 +1,8 @@
 .shou{
-  width: 20rpx ;
-  height: 20rpx ;
+  width:25rpx ;
+  height: 25rpx ;
   border-radius: 50% ;
-  background-color: #ef8934 ;
+  background-color: #efe234 ;
   text-align: center ;
   line-height: 40rpx ;
   font-size: 24rpx ;
@@ -10,15 +10,13 @@
 }
 
 .describe-container{
-  margin: 20rpx;
-  width: 60rpx！important;
-  padding: 0 30rpx;
+  margin:10rpx 0 10rpx 0;
+  width: 650rpx;
   color: #666;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-size: 28rpx;
- box-shadow:0px 3px 8px 0px rgba(154,172,193,0.5);
 }
 
 .btn-container{
@@ -40,12 +38,13 @@
 }
 .title{
     text-align: center;
-    font-size: 58rpx;
+    font-size: 40rpx;
     font-family: PingFangSC-Regular;
     font-weight: 400;
-    color: rgb(11, 12, 12);
+    color:red;
     margin-top: 22rpx;
-    font-style: italic
+    font-style: italic;
+    margin-bottom: 20rpx;
 }
 .subtitle{
   margin:30rpx ;
@@ -68,21 +67,53 @@
 }
 .title-container{
   position: relative;
-  height: 280rpx;
+  display: grid;
+  place-items: center;
 }
 .explain{
   display: flex;
   flex-direction: row;
-  position: absolute;
-  bottom: 0;
-  right: 20rpx;
+  color: rgb(182, 179, 179);
+  font-size:26rpx;
+  margin: 0 30rpx 0 30rpx;
 }
 .tip-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .row{
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right:10rpx ;
+}
+.s-title{
+  font-size: 30rpx !important;
+}
+.s-onStyle{
+  padding: 6rpx 10rpx 6rpx 10rpx;
+  width: 20%;
+  background-color: rgb(54, 173, 54);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 26rpx;
+  margin-right:20rpx ;
+  margin-left:20rpx ;
+  border-radius:10rpx;
+
+}
+.s-discription{
+  display: flex;
+  flex-direction: row;
+  margin:0;
+  padding: 0;
+}
+.s-content{
+  white-space:pre-wrap;
+  width: 70%;
+  font-size: 24rpx;
+}
+.red{
+  color: red!important;
 }
