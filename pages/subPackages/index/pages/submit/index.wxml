@@ -6,7 +6,7 @@
    <view class="slot">示例:</view>
    <view class="center">
     <image src="{{item.src}}" style="margin-bottom:20rpx;"></image>
-      <l-button icon="to-top" plain="true" icon-color="blue" icon-size="32" bindtap="onSub" data-index="{{index}}" disabled="{{item.disabled}}">{{item.disabled===false?"点击上传":"已上传"}}</l-button>
+      <l-button icon="to-top" plain="true" icon-color="blue" icon-size="32" bindtap="onSub" data-index="{{index}}" disabled="{{item.disabled}}">{{item.disabled===false?"上传":"已上传"}}</l-button>
    </view>
   </content-card>
  </block>

@@ -1,0 +1,51 @@
+<content-title name="{{name}}">
+	<view class="explain">{{tip}}</view>
+	<block wx:for="{{list}}">
+		<content-card name="{{item.name}}" cardPadding="{{false}}">
+			<view class="discription">{{item.discription}}</view>
+			<view class="center">
+				<image src="{{item.src}}" style="margin-bottom:20rpx;"></image>
+			</view>
+		</content-card>
+	</block>
+	<content-card name="操作栏" cardPadding="{{false}}">
+
+  <view class="cu-form-group margin-top">
+		<view class="title">审核结果</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{grades}}" >
+			<view class="picker">
+				{{index?grades[index]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+		<!-- <view class='top'>
+			<view class="check-container">
+				<view class="title">审核结果</view>
+				<view class="container"> -->
+					<!-- 下拉框 -->
+					<!-- <view class='top-selected' bindtap='bindShowMsg'>
+						<text>{{grade_name}}</text>
+					</view> -->
+					<!-- 下拉需要显示的列表 -->
+					<!-- <view class="select_box" wx:if="{{select}}">
+						<view wx:for="{{grades}}" wx:key="unique">
+							<view class="select_one" bindtap="mySelect" data-index="{{index}}" data-name="{{item}}">{{item}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view> -->
+	</content-card>
+  <content-card
+      wx:if="{{index==1||index==2}}"
+      class="content"
+      name="不通过理由"
+    >
+      <view class='buttun-wrapper'>
+        <l-textarea  l-class="textarea" style="width:100%;"   placeholder="请输入不通过理由"/>
+      </view>
+    </content-card>
+</content-title>
+<view class="button-container">
+<l-button plain="{{true}}" size="medium" bindtap="onBack">审核完毕</l-button>
+</view>

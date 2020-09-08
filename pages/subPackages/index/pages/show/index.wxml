@@ -4,7 +4,7 @@
   <content-card  name="{{item.name}}" cardPadding="{{false}}">
   <view class="discription">{{item.discription}}</view>
    <view class="center">
-   <image src="{{item.src}}" data-src="{{item.src}}" mode="aspectFit" bindtap="onShow"></image>
+   <image src="{{item.src}}" class="img" data-src="{{item.src}}" mode="aspectFit" bindtap="onShow"></image>
    </view>
   </content-card>
  </block>

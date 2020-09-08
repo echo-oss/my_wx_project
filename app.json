@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/navigator/index/index",
-
+    "pages/navigator/pageOne/index",
+    "pages/navigator/pageIndex/index",
     "pages/logs/logs"
   ],
   "window":{
@@ -18,8 +19,34 @@
         "pages/submit/index",
         "pages/reject/index"
       ]
+    },
+    {
+      "root": "pages/subPackages/pageOne",
+      "pages": [
+        "pages/reject/index"
+      ]
     }
   ],
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#3963BC",
+    "backgroundColor": "black",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/navigator/index/index",
+        "text": "用户端",
+        "iconPath": "/images/tabbar/team.png",
+        "selectedIconPath":"/images/tabbar/team-select.png" 
+      },
+      {
+        "pagePath": "pages/navigator/pageIndex/index",
+        "text": "银行端",
+        "iconPath": "/images/tabbar/base.png",
+        "selectedIconPath": "/images/tabbar/base-select.png"
+      }
+    ]
+  },
   "usingComponents": {
     "content-title": "/components/content-title/index",
     "content-card": "/components/content-card/index",

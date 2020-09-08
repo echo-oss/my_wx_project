@@ -12,8 +12,12 @@
   margin: 0 30rpx 0 30rpx;
 }
 .discription{
-  font-size: 26rpx;
+  font-size: 28rpx;
   color: #666;
   margin: 0 20rpx 10rpx 20rpx;
 
+}
+.img{
+  width: 1000rpx;
+  height: 750rpx;
 }

@@ -2,7 +2,7 @@
   width:25rpx ;
   height: 25rpx ;
   border-radius: 50% ;
-  background-color: #fbbd08;
+  background-color: #efe234 ;
   text-align: center ;
   line-height: 40rpx ;
   font-size: 24rpx ;
@@ -67,15 +67,12 @@
 }
 .title-container{
   position: relative;
-  display: grid;
-  place-items: center;
 }
 .explain{
   display: flex;
   flex-direction: row;
-  color: rgb(182, 179, 179);
-  font-size:26rpx;
-  margin: 0 30rpx 0 30rpx;
+  font-size:30rpx;
+  margin: 10rpx 30rpx 10rpx 30rpx;
 }
 .tip-container{
   display: flex;
@@ -117,4 +114,42 @@
 }
 .red{
   color: red!important;
+}
+.table {
+  border: 0px solid darkgray;
+  margin: 0rpx 20rpx;
+ }
+ .tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+ }
+ .td {
+  width:40%;
+  justify-content: center;
+  text-align: center;
+  font-size:26rpx ;
+ }
+ .bg-w{
+  background: snow;
+ }
+ .bg-g{
+  background: #E6F3F9;
+ }
+ .th {
+  width: 40%;
+  justify-content: center;
+  background: #3366ff9f;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+ }
+ .s-Style{
+  background-color: rgba(54, 119, 173, 0.712);
+  color: white;
+  border-radius:10rpx;
+  width: auto;
 }

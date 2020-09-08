@@ -2,21 +2,20 @@
 	<view class="title-container">
 		<view class="title">招商1+N供应链项目</view>
 		<view class="explain">
-			<view>说明:您可以按照下方提示进行提作，本行会有专人为您处理相关事宜。黑色标识步骤需要您进行操作，红色字部分为银行处理步骤，筹银行处理完毕后即可进行下一步，左侧灰色圆按纽为:待处理状态，绿色:通过，黄色: 资料待完善，红色:审核未通过</view>
+			<view>说明:您可以根据用户处理进度进行业务进程处理。左侧灰色圆按纽为:待处理状态，绿色:通过，黄色: 资料待完善，红色:审核未通过</view>
 		</view>
 	</view>
-
 	<l-steps direction="column" active-index="{{activeIndex}}">
 		<block wx:for="{{steps}}">
 			<view class="item">
 				<l-step title="{{item.title}}" custom="{{true}}"  l-title-class="s-title {{index===activeIndex?'red':''}}" l-describe-class="s-discription">
-					<view wx:if="{{item.state===1}}" class="shou" style="background-color: #39b54a; ;" slot="dot"></view>
-					<view wx:if="{{item.state===2}}" class="shou" style="background-color: #e54d42; " slot="dot"></view>
+					<view wx:if="{{item.state===1}}" class="shou" style="background-color: #39b54a;" slot="dot"></view>
+					<view wx:if="{{item.state===2}}" class="shou" style="background-color: #e54d42;" slot="dot"></view>
 					<view wx:if="{{item.state===3}}" class="shou" slot="dot"></view>
 					<view wx:if="{{item.state===0}}" class="shou" style="background-color: gray ;" slot="dot"></view>
 					<view  class="describe-container"  slot="describe">
 						<view class = "s-content">{{item.discription}}</view>
-						<view wx:if="{{index<steps.length-1}}" class = "s-onStyle" bindtap="onCheck"  data-id="{{item.id}}" data-type="{{item.type}}">{{item.onStyle}}</view>
+						<view wx:if="{{index<steps.length-1}}" class = "s-onStyle" bindtap="onCheck"  data-index="{{index}}" data-id="{{item.id}}" data-type="{{item.type}}">{{item.isCheck?"已审核":item.onStyle}}</view>
 					</view>
 				</l-step>
 			</view>
