@@ -1,15 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/navigator/index/index",
     "pages/navigator/pageOne/index",
     "pages/navigator/pageIndex/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "招商1+N供应链项目",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "subPackages": [
     {
@@ -37,7 +37,7 @@
         "pagePath": "pages/navigator/index/index",
         "text": "用户端",
         "iconPath": "/images/tabbar/team.png",
-        "selectedIconPath":"/images/tabbar/team-select.png" 
+        "selectedIconPath": "/images/tabbar/team-select.png"
       },
       {
         "pagePath": "pages/navigator/pageIndex/index",

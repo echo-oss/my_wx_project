@@ -59,8 +59,6 @@ Page({
       discription: "请您审核用户与中铁十八局的付款说明PDF版本",
       disabled: false,
     }]
-
-
     if (options.id === "0") {
       this.setData({
         list: list1,

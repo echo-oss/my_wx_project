@@ -100,7 +100,7 @@
   place-items: center;
   font-size: 26rpx;
   margin-right:20rpx ;
-  margin-left:20rpx ;
+  margin-left:30rpx ;
   border-radius:10rpx;
 
 }

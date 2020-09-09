@@ -69,9 +69,11 @@ Page({
   onShareAppMessage: function () {
 
   },
-  onCheck(){
+  onCheck(e){
+    console.log(e)
+    let phone = e.currentTarget.dataset.phone
     wx.navigateTo({
-      url: '/pages/navigator/pageOne/index',
+      url: `/pages/navigator/pageOne/index?phone=${phone}`,
     })
   }
 })

@@ -9,7 +9,6 @@
 		</content-card>
 	</block>
 	<content-card name="操作栏" cardPadding="{{false}}">
-
 		<view class="cu-form-group margin-top">
 			<view class="title">审核结果</view>
 			<picker bindchange="PickerChange" value="{{index}}" range="{{grades}}">

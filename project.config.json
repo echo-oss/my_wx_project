@@ -64,28 +64,7 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/subPackages/index/pages/show/index",
-					"pathName": "pages/subPackages/index/pages/show/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/navigator/pageIndex/index",
-					"pathName": "pages/navigator/pageIndex/index",
-					"scene": null
-				}
-			]
+			"list": []
 		}
 	}
 }

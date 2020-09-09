@@ -159,8 +159,14 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-
+  onLoad: function (options) {
+    let phone = options.phone
+    let string = `手机号为${phone}的用户纸质材料已经签收`
+    let steps = this.data.steps
+    steps[0].discription=string
+    this.setData({
+      steps,
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
