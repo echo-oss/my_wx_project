@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    index:null,
+    index: null,
     select: false,
     grades: ['通过', '未通过', '资料不全', ],
     list: []
@@ -18,30 +18,61 @@ Page({
   onLoad: function (options) {
     let list1 = [{
       name: "合同材料",
-      src:"/pages/subPackages/pageOne/pages/reject/images/u129.svg",
+      src: "/pages/subPackages/pageOne/pages/reject/images/u129.svg",
       discription: "请您审核用户与中铁十八局的合同PDF版本",
-      disabled:false,
+      disabled: false,
     }, {
       name: "结算单",
-      src:"/pages/subPackages/pageOne/pages/reject/images/u129.svg",
+      src: "/pages/subPackages/pageOne/pages/reject/images/u129.svg",
       discription: "请您审核用户与中铁十八局的结算单PDF版本",
-      disabled:false,
+      disabled: false,
     }, {
       name: "发票",
-      src:"/pages/subPackages/pageOne/pages/reject/images/u129.svg",
+      src: "/pages/subPackages/pageOne/pages/reject/images/u129.svg",
       discription: "请您审核用户与中铁十八局的发票PDF版本",
-      disabled:false,
+      disabled: false,
     }, {
       name: "付款说明",
-      src:"/pages/subPackages/pageOne/pages/reject/images/u129.svg",
+      src: "/pages/subPackages/pageOne/pages/reject/images/u129.svg",
       discription: "请您审核用户与中铁十八局的付款说明PDF版本",
-      disabled:false,
+      disabled: false,
     }]
+
+    let list2 = [{
+      name: "合同材料",
+      src: "/pages/subPackages/pageOne/pages/reject/images/u129.svg",
+      discription: "请您审核用户与中铁十八局的合同PDF版本",
+      disabled: false,
+    }, {
+      name: "结算单",
+      src: "/pages/subPackages/pageOne/pages/reject/images/u129.svg",
+      discription: "请您审核用户与中铁十八局的结算单PDF版本",
+      disabled: false,
+    }, {
+      name: "发票",
+      src: "/pages/subPackages/pageOne/pages/reject/images/u129.svg",
+      discription: "请您审核用户与中铁十八局的发票PDF版本",
+      disabled: false,
+    }, {
+      name: "付款说明",
+      src: "/pages/subPackages/pageOne/pages/reject/images/u129.svg",
+      discription: "请您审核用户与中铁十八局的付款说明PDF版本",
+      disabled: false,
+    }]
+
+
     if (options.id === "0") {
       this.setData({
         list: list1,
         tip: "说明：请您将合同、结算单、发票、付款说明等文件进行审核，并且在操作栏中选择通过、不通过以及资料不全。选择不通过或者资料不全需要手动输入不通过原因。点击审核完毕可跳转至首页",
         name: "审核电子版PDF资料"
+      })
+    }
+    if (options.id === "1") {
+      this.setData({
+        list: list2,
+        tip: "说明：请您将合同、结算单、发票、付款说明等文件进行审核，并且在操作栏中选择通过、不通过以及资料不全。选择不通过或者资料不全需要手动输入不通过原因。点击审核完毕可跳转至首页",
+        name: "审核电子版PDF材料"
       })
     }
   },
@@ -102,7 +133,7 @@ Page({
   PickerChange(e) {
     console.log(e);
     this.setData({
-      index : e.detail.value
+      index: e.detail.value
     })
   },
 })

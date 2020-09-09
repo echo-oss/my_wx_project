@@ -44,7 +44,7 @@ Page({
     if (options.id === "0") {
       this.setData({
         list: list1,
-        style:"已知晓并邮寄",
+        style: "已知晓并邮寄",
         name: "纸质材料准备",
         tip: "说明：请您将以下纸质材料发送到：天津市XX区XXX街道XXX招商银行XX支行，收件人：XXX，电话：XXXX，如果您不清楚寄送什么材料，请联系为您办理业务的客户经理索取材料。",
       })
@@ -52,7 +52,7 @@ Page({
     if (options.id === "1") {
       this.setData({
         list: list2,
-        style:"已完成",
+        style: "已完成",
         name: "登陆网银",
         tip: "说明：请您登录网银按照如下操作进行网签协议的签署和上传发票",
       })
@@ -60,7 +60,7 @@ Page({
     if (options.id === "2") {
       this.setData({
         list: list3,
-        style:"已完成",
+        style: "已完成",
         name: "融资申请",
         tip: "说明：请您登录网银按照如下操作进行融资申请",
       })

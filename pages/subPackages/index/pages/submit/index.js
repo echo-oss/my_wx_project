@@ -14,24 +14,24 @@ Page({
   onLoad: function (options) {
     let list1 = [{
       name: "合同材料",
-      src:"/pages/subPackages/index/pages/submit/images/u129.svg",
+      src: "/pages/subPackages/index/pages/submit/images/u129.svg",
       discription: "请您将与中铁十八局的合同转为PDF版本进行上传",
-      disabled:false,
+      disabled: false,
     }, {
       name: "结算单",
-      src:"/pages/subPackages/index/pages/submit/images/u129.svg",
+      src: "/pages/subPackages/index/pages/submit/images/u129.svg",
       discription: "请您将与中铁十八局的结算单转为PDF版本进行上传",
-      disabled:false,
+      disabled: false,
     }, {
       name: "发票",
-      src:"/pages/subPackages/index/pages/submit/images/u129.svg",
+      src: "/pages/subPackages/index/pages/submit/images/u129.svg",
       discription: "请您将与中铁十八局的发票转为PDF版本进行上传",
-      disabled:false,
+      disabled: false,
     }, {
       name: "付款说明",
-      src:"/pages/subPackages/index/pages/submit/images/u129.svg",
+      src: "/pages/subPackages/index/pages/submit/images/u129.svg",
       discription: "请您将与中铁十八局的付款说明转为PDF版本进行上传",
-      disabled:false,
+      disabled: false,
     }]
     if (options.id === "3") {
       this.setData({
@@ -95,9 +95,9 @@ Page({
       delta: 1,
     })
   },
-  onSub(e){
+  onSub(e) {
     const index = e.currentTarget.dataset.index
-    if(this.data.list[index].disabled==false){
+    if (this.data.list[index].disabled == false) {
       wx.lin.showToast({
         title: '上传成功~',
         icon: 'success',
@@ -109,8 +109,8 @@ Page({
         }
       })
     }
-   const list =  this.data.list
-   list[index].disabled=true
+    const list = this.data.list
+    list[index].disabled = true
     this.setData({
       list,
     })

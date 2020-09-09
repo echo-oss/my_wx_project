@@ -1,55 +1,64 @@
 /* pages/subPackages/index/pages/submit/index.wxss */
-.center{
+.center {
   display: grid;
   place-items: center;
 }
-.explain{
+
+.explain {
   display: flex;
   flex-direction: row;
   color: #666;
-  font-size:26rpx;
+  font-size: 26rpx;
   margin: 0 30rpx 0 30rpx;
 }
-.discription{
+
+.discription {
   font-size: 28rpx;
   color: #666;
   margin: 0 20rpx 20rpx 20rpx;
 }
-.slot{
+
+.slot {
   font-size: 26rpx;
   color: red;
   margin: 0 20rpx 10rpx 20rpx;
 }
-.top{
-}
-.check-container{
+
+.top {}
+
+.check-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.top-selected{
+
+.top-selected {
   width: 200rpx;
-  color:#666;
+  color: #666;
   text-align: center;
   border-bottom: 1rpx solid #666;
 }
-.select_box{
+
+.select_box {
   text-align: center;
   animation: myfirst 0.5s;
 }
-.select_one{
-  color:#666;
+
+.select_one {
+  color: #666;
 }
-.input-container{
+
+.input-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin-top: 20rpx;
 }
-.input{
+
+.input {
   padding: 0 10rpx;
-  color:#666;
+  color: #666;
   border-bottom: 1rpx solid #666;
   text-align: center;
 }
@@ -63,15 +72,18 @@
     height: 210rpx;
   }
 }
-.button-container{
+
+.button-container {
   display: grid;
   place-items: center;
   width: 100%;
   padding: 30rpx 0;
 }
+
 .buttun-wrapper {
- height: 320rpx;
+  height: 320rpx;
 }
-.textarea{
-  height:300rpx!important
+
+.textarea {
+  height: 300rpx !important
 }
