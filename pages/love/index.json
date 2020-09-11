@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-countdown":"/miniprogram_npm/lin-ui/countdown/index",
+    "l-slide-view":"/miniprogram_npm/lin-ui/slide-view/index"
+    }
+}

@@ -1,0 +1,61 @@
+<!--pages/text/love/index.wxml-->
+<view class="container">
+	<view class="content">{{content}}--{{content1}}</view>
+	<view class="down-container">
+		<button class="button" bindtap="onPlay">点击开始</button>
+		<button class="button" bindtap="onTip">点击添加方式</button>
+	</view>
+</view>
+<l-countdown time-type="second" time="{{time}}" format="{%h}:{%m}:{%s}"/>
+
+<block wx:for="{{list1}}">
+ <view class='slide-wrapper' wx:if="{{item.show}}">
+        <view class='row'></view>
+        <l-slide-view height="140" width="750" slide-width="200" bindlintap="onSlideTap"  >
+          <view slot="left" class="left">
+            <view class='left-con'>
+              <text class='left-title'>{{item.name}}</text>
+              <text class='left-time'>10-26 18:50</text>
+            </view>
+            <view class='left-price'><text style="color:rgba(244,81,108,1);">-</text> $2499</view>
+          </view>
+          <view slot="right" class="right">
+            <text bindtap="onRemove" data-id="{{index}}">删除</text>
+        </view>
+       </l-slide-view>
+      <view class='row'></view>
+  </view>
+</block>
+<view class="section">
+  <view class="section__title">普通选择器</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<button bindtap="turn">点击</button>
+<view class="move" id="move">
+  <view class="icon">图标</view>
+</view>
+<!-- <view class="main-container">
+   <view class="top-container">
+     <view class="div {{flag?'rotate1':''}}">图片1</view>
+     <view class="div {{flag?'rotate2':''}}">图片2</view>
+   </view>
+   <view class="buttom-container {{flag?'rotate3':''}}">图片3</view>
+   <view class="center  {{flag?'centerto':''}}">标题</view>
+</view> -->
+<button bindtap="onLoad"  >点击登录</button>
+<view class="main-container">
+   <view class="top-container">
+     <view class="div {{flag?'rotate1':''}}">图片1</view>
+     <view class="div {{flag?'rotate2':''}}">图片2</view>
+   </view>
+ <view class="top-container">
+     <view class="div {{flag?'rotate3':''}}">图片3</view>
+     <view class="div {{flag?'rotate4':''}}">图片4</view>
+   </view>
+   <view class="center  {{flag?'centerto':''}}">标题</view>
+</view>
+<button>点击有惊喜</button>

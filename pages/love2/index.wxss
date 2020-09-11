@@ -1,0 +1,12 @@
+/* pages/text/love/index.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100rpx;
+}
+.input{
+  border-bottom: 1rpx solid black;
+  text-align: center;
+}

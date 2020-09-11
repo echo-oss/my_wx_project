@@ -1,0 +1,5 @@
+
+<view class="container">
+	<view>请输入你想添加的方式</view>
+	<input class="input" bindconfirm="submit" value="方式1"></input>
+</view>

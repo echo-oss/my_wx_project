@@ -1,0 +1,230 @@
+/* pages/text/love/index.wxss */
+page{
+  background-color: white;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.down-container{
+  display: flex;
+  flex-direction: row;
+}
+.button{
+  width: auto !important;
+}
+.content{
+  font-size: 36rpx;
+  padding: 100rpx;
+  background-image:linear-gradient(to right,rgb(240,241,245),white)
+}
+.container{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.item1{display: grid;
+  place-items: center;}
+.item2{display: grid;
+    place-items: center;height: 200rpx;}
+
+/* pages/response/pages/slide-view/index.wxss */
+
+.buttun-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.slide-wrapper {
+  width: 750rpx;
+}
+
+.row {
+  height: 1rpx;
+  width: 750rpx;
+  background: rgba(243, 243, 243, 1);
+}
+
+.left {
+  background-color: white;
+  height: 140rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.left-con {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-title {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(69, 82, 107, 1);
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.left-time {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(196, 201, 210, 1);
+  line-height: 17px;
+}
+
+.left-price {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(69, 82, 107, 1);
+  line-height: 22px;
+}
+
+.right {
+  height: 140rpx;
+  display: flex;
+  direction: row;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: space-around;
+  line-height: 140rpx;
+  background: rgba(54, 131, 214, 1);
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.like{
+  background: #9AB2FF;
+  width: 33%
+}
+
+.share{
+  background: #6E90FD;
+  width: 33%  
+}
+
+.del{
+  background: #F4516C;
+  width: 34%  
+}
+.section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 36rpx;
+}
+.section__title{
+
+}
+.picker{
+  border-bottom: 1rpx solid rgba(128, 128, 128, 0.801);
+}
+.bg{
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+}
+.co{
+  width: 300rpx;
+  color:blueviolet;
+  border:thin solid ;
+  transition: all 1s ease-in-out 0s;
+  transform:translate(100rpx) rotateX(360deg) scaleX(1);
+
+}
+.co::after{
+  display: block;
+  content: "";
+  background-color:red;
+  transition: all 1s ease-in-out 0s;
+  width: 0px;
+  border-bottom:1rpx solid rgb(54, 54, 49);
+}
+.co.long::after {
+  display: block;
+  width: 100px;
+  border-bottom:10rpx solid yellow;
+  
+  background-color: blue;
+}
+.co.long{
+  width: 300px;
+  color: blue;
+  transform:translate(0) rotateX(0) scale(0,0);
+}
+.main-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.top-container{
+  display: flex;
+  flex-direction: row;
+}
+.div{
+  flex: 1;
+  height: 150rpx;
+  margin: 10rpx;
+  display: grid;
+  place-items: center;
+  background-color: blue;
+  transition: all 1s ease-in 0s;
+  transform: rotate(0) translate(0);
+}
+.buttom-container{
+  margin: 2rpx 10rpx;
+  background-color: #F4516C;
+  height: 150rpx;
+  display: grid;
+  place-items: center;
+  transition: all 1s ease-in-out 0s;
+  transform: translate(0);
+}
+.div.rotate1{
+  transform:  translate(-100rpx,-100rpx);
+}
+.div.rotate2{
+  transform: translate(100rpx,-100rpx);
+}
+.div.rotate3{
+  transform:  translate(-100rpx,100rpx);
+}
+.div.rotate4{
+  transform: translate(100rpx,100rpx);
+}
+.buttom-container.rotate3{
+  transform: translateY(100rpx);
+  z-index:666;
+}
+.center{
+   position: absolute;
+   top:50%;
+   left: 50%;
+   display: grid;
+   place-items: center;
+   margin-top: -75rpx;
+   margin-left:-176rpx ;
+   width: 352rpx;
+   height: 150rpx;
+   font-size: 38rpx;
+   background-color: red;
+   opacity: 0;
+   transition:all 1s ease-in-out 0.1s ;
+   transform: rotate(360deg) scale(0);
+}
+.center.centerto{
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}

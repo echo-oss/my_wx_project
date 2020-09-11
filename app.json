@@ -1,13 +1,18 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/love/index",
+    "pages/love2/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "授权您的位置为您提供地图导航及附近信息服务"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
