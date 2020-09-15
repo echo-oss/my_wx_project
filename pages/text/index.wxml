@@ -1,0 +1,14 @@
+<!--pages/text/index.wxml-->
+<view class="head">
+	<view class="cuIcon-back" bindtap="lastMonth"></view>
+	<view bindtap="onBack">{{year}}年{{month}}月</view>
+	<view class="cuIcon-right" bindtap="nextMonth"></view>
+</view>
+<view class="top-content">
+	<view wx:for="{{weekList}}" class="week">{{item}}</view>
+</view>
+<view class="content">
+	<view wx:for="{{dateArr}}" class="day {{item.isday?'isDay':''}}" bindtap="onDay" data-index="{{index}}">{{item.dateNum}} </view>
+</view>
+<view class="bg"></view>
+<view class="bg2"></view>

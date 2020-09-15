@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tempFilePaths:[{},{},{},{}],
     flag:false,
     index:0,
     time: 0,
@@ -20,6 +21,15 @@ Page({
     wx.setStorage({
       key:"list",
       data:[]
+    })
+
+    let array = []
+    for(let i = 0 ;i<=200;i+=10){
+      array.push(i)
+    }
+    console.log(array)
+    this.setData({
+      array,
     })
   },
   onShareAppMessage() {
@@ -43,6 +53,9 @@ Page({
    this.setData({
      list:wx.getStorageSync('list')
    })
+  
+
+
   },
 
   /**
@@ -86,7 +99,7 @@ Page({
   },
   onPlay(){
     let i = this._randomNum(0,this.data.list.length-1)
-    let j = this._randomNum(0,20)
+    let j = this._randomNum(0,this.data.time)
     this.setData({
       content:this.data.list[i],
       content1:j
@@ -118,7 +131,7 @@ bindPickerChange: function(e) {
   console.log('picker发送选择改变，携带值为', e.detail.value)
   let index = e.detail.value
   let array = this.data.array
-  let time = array[index] * 60
+  let time = array[index]
   this.setData({
     index,
     time
@@ -145,4 +158,68 @@ getUserInfo(res){
 //     }
 //   })
 // },
+// openImage(){
+//   wx.chooseImage({
+//     count: 1,
+//     sizeType: ['original', 'compressed'],
+//     sourceType: ['album', 'camera'],
+//     success :res=> {
+//       // tempFilePath可以作为img标签的src属性显示图片
+//       const tempFilePaths = res.tempFilePaths
+//       this.setData({
+//         tempFilePaths,
+//       })
+//     }
+//   })
+// },
+// openImage1(){
+//   wx.chooseImage({
+//     count: 1,
+//     sizeType: ['original', 'compressed'],
+//     sourceType: ['album', 'camera'],
+//     success :res=> {
+//       // tempFilePath可以作为img标签的src属性显示图片
+//       const tempFilePaths1 = res.tempFilePaths
+//       this.setData({
+//         tempFilePaths1,
+//       })
+//     }
+//   })
+// },
+// openImage2(){
+//   wx.chooseImage({
+//     count: 1,
+//     sizeType: ['original', 'compressed'],
+//     sourceType: ['album', 'camera'],
+//     success :res=> {
+//       // tempFilePath可以作为img标签的src属性显示图片
+//       const tempFilePaths2 = res.tempFilePaths
+//       this.setData({
+//         tempFilePaths2,
+//       })
+//     }
+//   })
+// },
+openImage(){
+  wx.chooseImage({
+    count: 4,
+    sizeType: ['original', 'compressed'],
+    sourceType: ['album', 'camera'],
+    success :res=> {
+      console.log(res)
+      // tempFilePath可以作为img标签的src属性显示图片
+      const tempFilePaths = res.tempFilePaths
+      this.setData({
+        tempFilePaths,
+      })
+    }
+  })
+},
+Start(){
+  let i = this._randomNum(1,100);
+  this.setData({
+    count:i,
+  })
+}
+
 })

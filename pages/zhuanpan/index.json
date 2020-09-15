@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+     "zhuanpan": "/component/zhuanpan/index"
+  }
+}

@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/love/index",
-    "pages/love2/index"
+    "pages/love2/index",
+    "pages/text/index",
+    "pages/zhuanpan/index",
+    "pages/fly/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

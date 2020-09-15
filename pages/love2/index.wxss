@@ -10,3 +10,6 @@
   border-bottom: 1rpx solid black;
   text-align: center;
 }
+page{
+  background-image:linear-gradient(to bottom,white,rgba(0, 217, 255, 0.178));
+}

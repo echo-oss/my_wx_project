@@ -1,0 +1,64 @@
+/* pages/text/index.wxss */
+page{
+  background-color: white;
+}
+.head{
+  background-color: rgba(0, 217, 255, 0.26);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: thin solid rgba(128, 128, 128, 0);
+  box-shadow: 0rpx 5rpx 2rpx  rgba(128, 128, 128, 0.185);
+  padding: 20rpx;
+}
+.top-content{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  place-items: center;
+  width: 80%;
+  margin: auto;
+  border-bottom:thin solid rgba(128, 128, 128, 0.219);
+}
+.week{
+ padding: 20rpx 0rpx;
+}
+.day{
+  padding: 18rpx 0rpx;
+  width: 80%;
+  border-radius: 50%;
+  text-align: center;
+  background-color: white;
+  transition:all 0.3s ease-in 0s;
+  color: rgba(128, 128, 128, 0.979);
+}
+.day.isDay{
+  background-color: rgb(201, 200, 200);
+  z-index: 3;
+}
+.content{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  place-items: center;
+  width: 80%;
+  margin: auto;
+}
+.bg{
+  width: 55%;
+  height: 400rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -60rpx;
+  background-color:rgba(0, 217, 255, 0.26) ;
+  z-index: -1;
+
+}
+.bg2{
+  width: 40%;
+  height: 400rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -60rpx;
+  background-color:white;
+  z-index: -1;
+}

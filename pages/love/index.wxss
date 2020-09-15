@@ -13,11 +13,13 @@ page{
 }
 .button{
   width: auto !important;
+  background-color: rgba(0, 217, 255, 0.062);
 }
 .content{
   font-size: 36rpx;
   padding: 100rpx;
-  background-image:linear-gradient(to right,rgb(240,241,245),white)
+  background-image:linear-gradient(to right,rgba(0, 217, 255, 0.178),white);
+  margin-top: 30rpx;
 }
 .container{
   display: grid;
@@ -121,7 +123,7 @@ page{
 .section{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 36rpx;
 }
 .section__title{
@@ -175,37 +177,38 @@ page{
 }
 .div{
   flex: 1;
-  height: 150rpx;
+  height: auto;
   margin: 10rpx;
   display: grid;
   place-items: center;
-  background-color: blue;
-  transition: all 1s ease-in 0s;
-  transform: rotate(0) translate(0);
+  background-color: rgba(129, 129, 139, 0.226);
+  transition: all 1s ease-in-out 0s;
+  transform: translate(0) rotateZ(0deg);
+  box-shadow: 0px 5px 2px  rgba(46, 111, 116, 0.055) ;
 }
 .buttom-container{
   margin: 2rpx 10rpx;
   background-color: #F4516C;
-  height: 150rpx;
+  height: auto;
   display: grid;
   place-items: center;
   transition: all 1s ease-in-out 0s;
   transform: translate(0);
 }
 .div.rotate1{
-  transform:  translate(-100rpx,-100rpx);
+  transform:  translate(-100rpx,-100rpx) rotateZ(660deg);
 }
 .div.rotate2{
-  transform: translate(100rpx,-100rpx);
+  transform: translate(100rpx,-100rpx) rotateZ(660deg);
 }
 .div.rotate3{
-  transform:  translate(-100rpx,100rpx);
+  transform:  translate(-100rpx,100rpx) rotateZ(660deg);
 }
 .div.rotate4{
-  transform: translate(100rpx,100rpx);
+  transform: translate(100rpx,100rpx) rotateZ(660deg);
 }
 .buttom-container.rotate3{
-  transform: translateY(100rpx);
+  transform: translateZ(100rpx);
   z-index:666;
 }
 .center{
@@ -219,12 +222,27 @@ page{
    width: 352rpx;
    height: 150rpx;
    font-size: 38rpx;
-   background-color: red;
+   background-color: rgba(255, 0, 0, 0.158);
    opacity: 0;
+   border-radius: 100%;
    transition:all 1s ease-in-out 0.1s ;
-   transform: rotate(360deg) scale(0);
+   transform:  scale(0);
 }
 .center.centerto{
   opacity: 1;
-  transform: rotate(0) scale(1);
+  transform:  scale(1);
+  border-radius: 0;
+}
+.button-hover{
+  color: #6E90FD;
+}
+.image{
+  width: 350rpx;
+  height:350rpx ;
+  z-index: 999;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  position: relative;
 }
