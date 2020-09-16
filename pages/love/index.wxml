@@ -56,3 +56,15 @@
 	<view class="center  {{flag?'centerto':''}}">标题</view>
 </view>
 <button class="button" bindtap="turn">点击有惊喜</button>
+
+<view class="section">
+  <view class="section__title">省市区选择器</view>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker" wx:if="{{region[0]===''}}">
+    <view class="cuIcon-right"></view>
+    </view>
+    <view class="picker" wx:else>
+      {{region[0]}}/{{region[1]}}/{{region[2]}}
+    </view>
+  </picker>
+</view>
