@@ -1,0 +1,8 @@
+/* pages/subPackages/index/pages/detail/index.wxss */
+.explain{
+  display: flex;
+  flex-direction: row;
+  color: #666;
+  font-size:30rpx;
+  margin: 0 30rpx 0 30rpx;
+}

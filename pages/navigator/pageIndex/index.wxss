@@ -37,6 +37,7 @@
   flex-direction: row;
 }
 .title{
+  white-space:pre-wrap;
     text-align: center;
     font-size: 40rpx;
     font-family: PingFangSC-Regular;

@@ -1,0 +1,7 @@
+<content-title name="说明详情">
+	<view class="explain" bindtap="openShow">
+				<view>说明:您可以根据用户处理进度进行业务进程处理。左侧灰色圆按纽为:待处理状态，绿色:通过，黄色: 资料待完善，红色:审核未通过</view>
+		</view>
+<view style="height:300rpx;width:100%"></view>
+<l-button  bindtap="onBack">已阅读</l-button>
+</content-title>

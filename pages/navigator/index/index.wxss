@@ -37,6 +37,7 @@
   flex-direction: row;
 }
 .title{
+    white-space:pre-wrap;
     text-align: center;
     font-size: 40rpx;
     font-family: PingFangSC-Regular;
@@ -75,7 +76,7 @@
   flex-direction: row;
   color: rgb(182, 179, 179);
   font-size:26rpx;
-  margin: 0 30rpx 0 30rpx;
+  margin: 0 30rpx 30rpx 30rpx;
 }
 .tip-container{
   display: flex;
@@ -107,7 +108,7 @@
 .s-discription{
   display: flex;
   flex-direction: row;
-  margin:30rpx 0;
+  margin:20rpx 0 30rpx 0;
   padding: 0;
 }
 .s-content{
@@ -118,3 +119,37 @@
 .red{
   color: red!important;
 }
+.phone{
+  margin: 0;
+  padding: 0;
+  border-bottom: thin solid rgba(128, 128, 128, 0.39);
+  margin-left: 30rpx;
+  width: 230rpx;
+  text-align: center;
+  color:rgba(128, 128, 128, 0.596);
+}
+.describe-c{
+  display: flex;
+  flex-direction: column;
+  margin:10rpx 30rpx 10rpx 10rpx;
+  width: 600rpx;
+  color: #666;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 28rpx;
+}
+.row-c{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.flow-c{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 40rpx;
+  bottom: 30rpx;
+  align-items: center;
+  color: rgba(102, 102, 102, 0.795);
+}
+

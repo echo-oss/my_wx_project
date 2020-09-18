@@ -5,74 +5,90 @@ Page({
    * 页面的初始数据
    */
   data: {
+    onShow: false,
     activeIndex: 2,
     steps: [{
-        type:"show",
-        id:0,
+        time: "完成时间:2020/07/05",
+        type: "show",
+        id: 0,
         title: "纸质材料准备",
         state: 1,
         isSub: true,
-        discription:"请您准备纸质材料邮寄到\nXXXXXXXXXXX\n联系人:xxx。联系电话:\n139XXXX8276" ,
-        onStyle:"查看"
+        discription: "请您准备纸质材料邮寄到\nXXXXXXXXXXX\n联系人:xxx。联系电话:\n139XXXX8276",
+        onStyle: "查看"
       },
-      { type:"submit",
+      {
+        time: "完成时间:2020/07/08",
+        type: "submit",
         title: "上传电子版PDF材料",
         state: 1,
         isSub: false,
-        id:3,
-        discription:"请您将合同、结算单、发票、付款说明等PDF文件发送到微信中，然后根据提示进行上传" ,
-        onStyle:"上传资料"
+        id: 3,
+        discription: "请您将合同、结算单、发票、付款说明等PDF文件发送到微信中，然后根据提示进行上传",
+        onStyle: "上传资料"
       },
       {
-        type:"reject",
+        time: "完成时间:2020/07/09",
+        type: "reject",
         title: "银行上传电子材料入系统等待审核",
         state: 2,
         isSub: false,
-        discription:"银行已经将您上传的电子材料录入系统，请您耐心等待审核结果，审核期为：1-3个工作日",
-        onStyle:"查看原因",
-        id:0,
+        discription: "银行已经将您上传的电子材料录入系统，请您耐心等待审核结果，审核期为：1-3个工作日",
+        onStyle: "查看原因",
+        id: 0,
       },
-      { type:"show",
+      {
+        time: "完成时间:2020/07/10",
+        type: "show",
         title: "登录网银",
         state: 1,
         isSub: true,
-        id:1,
-        discription:"请您使用招商银行为您开通的两个网银U盾登录招商银行网银网站，进行网签协议和上传发票" ,
-        onStyle:"已完成"
+        id: 1,
+        discription: "请您使用招商银行为您开通的两个网银U盾登录招商银行网银网站，进行网签协议和上传发票",
+        onStyle: "已完成"
       },
-      { type:"reject",
+      {
+        time: "完成时间:2020/07/16",
+        type: "reject",
         title: "中铁十八局审核发票中",
         state: 1,
         isSub: false,
-        discription:"请您耐心等待，中铁十八局正在审核发票真伪" ,
-        onStyle:"已处理",
-        id:1,
+        discription: "请您耐心等待，中铁十八局正在审核发票真伪",
+        onStyle: "已处理",
+        id: 1,
       },
-      { type:"reject",
+      {
+        time: "完成时间:2020/07/20",
+        type: "reject",
         title: "招商银行审贷部审核",
         state: 3,
         isSub: false,
-        discription:"请您耐心等待，招商银行审贷部正在处理上传资料" ,
-        onStyle:"查看原因",
-        id:2,
+        discription: "请您耐心等待，招商银行审贷部正在处理上传资料",
+        onStyle: "查看原因",
+        id: 2,
       },
-      { type:"show",
+      {
+        time: "完成时间:2020/07/23",
+        type: "show",
         title: "融资申请",
         state: 0,
         isSub: false,
-        discription:"请您登陆网银进行融资申请操作" ,
-        onStyle:"待处理",
-        id:2,
+        discription: "请您登陆网银进行融资申请操作",
+        onStyle: "待处理",
+        id: 2,
       },
-      {type:"reject",
+      {
+        time: "完成时间:2020/07/26",
+        type: "reject",
         title: "放贷中心审核",
         state: 0,
         isSub: false,
-        discription:"请您耐心等待，招商银行审贷部正在处理上传资料" ,
-        onStyle:"待处理",
-        id:3,
+        discription: "请您耐心等待，招商银行审贷部正在处理上传资料",
+        onStyle: "待处理",
+        id: 3,
       },
       {
+        time: "完成时间:2020/07/28",
         title: "审核完成放款",
         state: 0,
         isSub: false,
@@ -84,7 +100,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-
+    wx.getSetting({
+      success: res => {
+        console.log(res)
+      }
+    })
   },
   // onSub() {
   //   const that = this
@@ -170,12 +190,28 @@ Page({
   //     }
   //   })
   // },
-  onCheck(e){
+  onCheck(e) {
     console.log(e)
-    const type=e.currentTarget.dataset.type
-    const id=e.currentTarget.dataset.id
+    const type = e.currentTarget.dataset.type
+    const id = e.currentTarget.dataset.id
     wx.navigateTo({
       url: `/pages/subPackages/index/pages/${type}/index?id=${id}`,
     })
   },
+  openShow() {
+    console.log("open")
+    this.setData({
+      onShow: true
+    })
+  },
+  closeShow() {
+    this.setData({
+      onShow: false
+    })
+  },
+  onNav() {
+    wx.navigateTo({
+      url: '/pages/subPackages/index/pages/detail/index',
+    })
+  }
 });

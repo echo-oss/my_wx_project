@@ -144,7 +144,7 @@
   color: #595959;
   font-size: 26rpx;
   line-height: 40rpx;
-  margin: 10rpx 0
+  margin: 10rpx 0rpx 5rpx 0rpx
 }
 
 .step-title-process {
@@ -178,4 +178,8 @@
 
 .icon-error:before {
   content: "\e6cf"
+}
+.d-subtitle{
+  font-size: 28rpx;
+  color: rgba(128, 128, 128, 0.479);
 }

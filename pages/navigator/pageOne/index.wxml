@@ -1,14 +1,18 @@
 <view class="container">
 	<view class="title-container">
-		<view class="title">招商1+N供应链项目</view>
+		<view class="title">中铁十八局&招商银行\n济宁1+N供应链项目</view>
 		<view class="explain">
 			<view>说明:您可以根据用户处理进度进行业务进程处理。左侧灰色圆按纽为:待处理状态，绿色:通过，黄色: 资料待完善，红色:审核未通过</view>
+			<view class="flow-c" bindtap="onNav">
+				<view >查看详情</view>
+				<view class="cuIcon-right" style="font-size:28rpx"></view>
+			</view>
 		</view>
 	</view>
 	<l-steps direction="column" active-index="{{activeIndex}}">
 		<block wx:for="{{steps}}">
 			<view class="item">
-				<l-step title="{{item.title}}" custom="{{true}}"  l-title-class="s-title {{index===activeIndex?'red':''}}" l-describe-class="s-discription">
+				<l-step title="{{item.title}}" custom="{{true}}" subtitle="{{item.time}}" l-title-class="s-title {{index===activeIndex?'red':''}}" l-describe-class="s-discription">
 					<view wx:if="{{item.state===1}}" class="shou" style="background-color: #39b54a;" slot="dot"></view>
 					<view wx:if="{{item.state===2}}" class="shou" style="background-color: #e54d42;" slot="dot"></view>
 					<view wx:if="{{item.state===3}}" class="shou" slot="dot"></view>

@@ -15,6 +15,9 @@
     <view class="l-title-class {{activeIndex===index?'step-title-process':'step-title'}}">
       {{title}}
     </view>
+    <view class="d-subtitle">
+      {{subtitle}}
+    </view>
     <view class="l-describe-class step-describe">
       {{describe}}
       <slot name="describe"/>

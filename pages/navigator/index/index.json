@@ -4,6 +4,7 @@
     "l-step": "/miniprogram_npm/lin-ui/step/index",
     "l-button": "/miniprogram_npm/lin-ui/button/index",
     "l-toast": "/miniprogram_npm/lin-ui/toast/index",
+    "l-mask": "/miniprogram_npm/lin-ui/mask/index",
     "dropdownmenu": "/components/dropdownmenu/dropdownmenu"
   }
 }

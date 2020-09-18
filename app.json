@@ -8,7 +8,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "招商1+N供应链项目",
+    "navigationBarTitleText": "中铁十八局&招商银行\n济宁1+N供应链项目",
     "navigationBarTextStyle": "black"
   },
   "subPackages": [
@@ -17,13 +17,15 @@
       "pages": [
         "pages/show/index",
         "pages/submit/index",
-        "pages/reject/index"
+        "pages/reject/index",
+        "pages/detail/index"
       ]
     },
     {
       "root": "pages/subPackages/pageOne",
       "pages": [
-        "pages/reject/index"
+        "pages/reject/index",
+        "pages/detail/index"
       ]
     }
   ],
@@ -50,7 +52,8 @@
   "usingComponents": {
     "content-title": "/components/content-title/index",
     "content-card": "/components/content-card/index",
-    "l-button": "/miniprogram_npm/lin-ui/button/index"
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-input": "/miniprogram_npm/lin-ui/input/index"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

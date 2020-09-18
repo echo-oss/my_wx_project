@@ -37,6 +37,7 @@
   flex-direction: row;
 }
 .title{
+    white-space:pre-wrap;
     text-align: center;
     font-size: 40rpx;
     font-family: PingFangSC-Regular;
@@ -75,7 +76,7 @@
   flex-direction: row;
   color: rgb(182, 179, 179);
   font-size:26rpx;
-  margin: 0 30rpx 0 30rpx;
+  margin: 0 30rpx 30rpx 30rpx;
 }
 .tip-container{
   display: flex;
@@ -117,4 +118,13 @@
 }
 .red{
   color: red!important;
+}
+.flow-c{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 40rpx;
+  bottom: 30rpx;
+  align-items: center;
+  color: rgba(102, 102, 102, 0.795);
 }
